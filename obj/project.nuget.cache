@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/i+HFrDDpXgRDZVQT+M0vfqXzDCbE+ZM9XT/sCmun3IxwpCGaZsopOKniOLV6pa3J+C0sqW+xzOQGR+XUEFe3g==",
+  "dgSpecHash": "N8fL02or9K78vtg84FghB0FmmEEFo7xqzJLoI4dJenPf7n3cR2TNmPrmBOYnQQDobbYy+p3g++10PJjKoMx7ng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Julia\\Desktop\\ITVitae bestanden\\PassManager\\PassManager\\PassManager.csproj",
+  "projectFilePath": "C:\\Users\\Julia\\Desktop\\ITVitae bestanden\\PassManager\\PassManager\\PassManager.Winforms.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

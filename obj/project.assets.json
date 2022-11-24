@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Julia\\Desktop\\ITVitae bestanden\\PassManager\\PassManager\\PassManager.csproj",
-      "projectName": "PassManager",
-      "projectPath": "C:\\Users\\Julia\\Desktop\\ITVitae bestanden\\PassManager\\PassManager\\PassManager.csproj",
+      "projectUniqueName": "C:\\Users\\Julia\\Desktop\\ITVitae bestanden\\PassManager\\PassManager\\PassManager.Winforms.csproj",
+      "projectName": "PassManager.Winforms",
+      "projectPath": "C:\\Users\\Julia\\Desktop\\ITVitae bestanden\\PassManager\\PassManager\\PassManager.Winforms.csproj",
       "packagesPath": "C:\\Users\\Julia\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Julia\\Desktop\\ITVitae bestanden\\PassManager\\PassManager\\obj\\",
       "projectStyle": "PackageReference",

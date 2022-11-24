@@ -11,10 +11,10 @@ namespace PassManager
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            LoginWindow addPhone = Services.ServiceProvider.GetRequiredService<LoginWindow>();
+            LoginWindow addPhone = Services.ServiceProvider.GetService<LoginWindow>();
             if (addPhone.ShowDialog() == DialogResult.OK)
             {
-                //hi
+                throw new NotImplementedException();
             }
         }
     }

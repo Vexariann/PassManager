@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.LoginButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
+            this.LoginCancelButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -55,26 +55,26 @@
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = false;
             // 
-            // CancelButton
+            // LoginCancelButton
             // 
-            this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelButton.AutoSize = true;
-            this.CancelButton.BackColor = System.Drawing.Color.SkyBlue;
-            this.CancelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.CancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CancelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.CancelButton.FlatAppearance.BorderSize = 0;
-            this.CancelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.CancelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelButton.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CancelButton.ForeColor = System.Drawing.Color.DimGray;
-            this.CancelButton.Location = new System.Drawing.Point(120, 262);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(175, 47);
-            this.CancelButton.TabIndex = 3;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = false;
+            this.LoginCancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoginCancelButton.AutoSize = true;
+            this.LoginCancelButton.BackColor = System.Drawing.Color.SkyBlue;
+            this.LoginCancelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.LoginCancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoginCancelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.LoginCancelButton.FlatAppearance.BorderSize = 0;
+            this.LoginCancelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.LoginCancelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.LoginCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginCancelButton.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LoginCancelButton.ForeColor = System.Drawing.Color.DimGray;
+            this.LoginCancelButton.Location = new System.Drawing.Point(120, 262);
+            this.LoginCancelButton.Name = "LoginCancelButton";
+            this.LoginCancelButton.Size = new System.Drawing.Size(175, 47);
+            this.LoginCancelButton.TabIndex = 3;
+            this.LoginCancelButton.Text = "Cancel";
+            this.LoginCancelButton.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -99,11 +99,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(410, 340);
+            this.ClientSize = new System.Drawing.Size(406, 336);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.LoginCancelButton);
             this.Controls.Add(this.LoginButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LoginWindow";
@@ -118,7 +118,7 @@
         #endregion
 
         private Button LoginButton;
-        private Button CancelButton;
+        private Button LoginCancelButton;
         private Label label1;
         private Label label2;
     }
