@@ -1,10 +1,21 @@
+using PassManager.Winforms;
+
 namespace PassManager
 {
-    public partial class Form1 : Form
+    public partial class PMHome : Form
     {
-        public Form1()
+        public PMHome()
         {
             InitializeComponent();
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            LoginWindow addPhone = Services.ServiceProvider.GetRequiredService<LoginWindow>();
+            if (addPhone.ShowDialog() == DialogResult.OK)
+            {
+                //hi
+            }
         }
     }
 }
