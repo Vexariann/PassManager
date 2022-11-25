@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "N8fL02or9K78vtg84FghB0FmmEEFo7xqzJLoI4dJenPf7n3cR2TNmPrmBOYnQQDobbYy+p3g++10PJjKoMx7ng==",
+  "dgSpecHash": "T9W9Q2CnE3xzw5p3LghW7r9FZ4S/1b1WCdKsv+M6p7vTU/svC9GRKcAnJGaTdt7+oqEWkhrnOBEn50zq0JraYg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Julia\\Desktop\\ITVitae bestanden\\PassManager\\PassManager\\PassManager.Winforms.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Julia\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Julia\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

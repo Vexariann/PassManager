@@ -1,3 +1,6 @@
+using Microsoft.Extensions.DependencyInjection;
+using PassManager.Winforms;
+
 namespace PassManager
 {
     internal static class Program
@@ -11,7 +14,15 @@ namespace PassManager
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new PMHome());
+
+            var services = new ServiceCollection();
+            services.AddScoped<PMHome>();
+            services.AddScoped<LoginWindow>();
+
+            Services.ServiceProvider = services.BuildServiceProvider();
+            var pMHome = Services.ServiceProvider.GetRequiredService<PMHome>();
+
+            Application.Run(pMHome);
         }
     }
 }

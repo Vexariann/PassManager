@@ -48,7 +48,7 @@
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LoginButton.ForeColor = System.Drawing.Color.DimGray;
-            this.LoginButton.Location = new System.Drawing.Point(120, 200);
+            this.LoginButton.Location = new System.Drawing.Point(107, 202);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(175, 47);
             this.LoginButton.TabIndex = 2;
@@ -69,17 +69,18 @@
             this.LoginCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginCancelButton.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LoginCancelButton.ForeColor = System.Drawing.Color.DimGray;
-            this.LoginCancelButton.Location = new System.Drawing.Point(120, 262);
+            this.LoginCancelButton.Location = new System.Drawing.Point(107, 269);
             this.LoginCancelButton.Name = "LoginCancelButton";
             this.LoginCancelButton.Size = new System.Drawing.Size(175, 47);
             this.LoginCancelButton.TabIndex = 3;
             this.LoginCancelButton.Text = "Cancel";
             this.LoginCancelButton.UseVisualStyleBackColor = false;
+            this.LoginCancelButton.Click += new System.EventHandler(this.LoginCancelButton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(90, 53);
+            this.label1.Location = new System.Drawing.Point(76, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(241, 20);
             this.label1.TabIndex = 4;
@@ -88,7 +89,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(90, 73);
+            this.label2.Location = new System.Drawing.Point(76, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(232, 20);
             this.label2.TabIndex = 5;
@@ -99,7 +100,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(406, 336);
+            this.ClientSize = new System.Drawing.Size(394, 324);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
