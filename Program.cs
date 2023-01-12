@@ -18,6 +18,7 @@ namespace PassManager
             var services = new ServiceCollection();
             services.AddScoped<PMHome>();
             services.AddScoped<LoginWindow>();
+            services.AddScoped<PMDashboard>();
 
             Services.ServiceProvider = services.BuildServiceProvider();
             var pMHome = Services.ServiceProvider.GetRequiredService<PMHome>();

@@ -79,11 +79,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.VersionText.AutoSize = true;
             this.VersionText.BackColor = System.Drawing.Color.Transparent;
-            this.VersionText.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.VersionText.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.VersionText.ForeColor = System.Drawing.Color.DimGray;
-            this.VersionText.Location = new System.Drawing.Point(12, 520);
+            this.VersionText.Location = new System.Drawing.Point(12, 524);
             this.VersionText.Name = "VersionText";
-            this.VersionText.Size = new System.Drawing.Size(284, 19);
+            this.VersionText.Size = new System.Drawing.Size(206, 15);
             this.VersionText.TabIndex = 2;
             this.VersionText.Text = "V0.0001 BETA build - Vexarian 2022";
             this.VersionText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
