@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "yAdluCpj4/lqMLXRF0nlddfoUaAgl69qXB7gWqxe9kdWm5yPWSu1PixELpxaFw4VDpEPP8X6hx9tkyORpRNlmg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Julia\\Desktop\\ITVitae bestanden\\PassManager\\PassManager.Interfaces\\PassManager.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Julia\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Julia\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\Julia\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
