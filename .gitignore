@@ -361,3 +361,11 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+.vs/PassManager/DesignTimeBuild/.dtbcache.v2
+.vs/PassManager/v17/.futdcache.v2
+.vs/PassManager/v17/.suo
+.vs/ProjectEvaluation/passmanager.metadata.v5.2
+.vs/ProjectEvaluation/passmanager.projects.v5.2
+*.v2
+*.2
+.vs/PassManager/v17/.suo
