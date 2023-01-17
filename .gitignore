@@ -382,3 +382,6 @@ FodyWeavers.xsd
 *.v2
 *.2
 .vs/PassManager/v17/.suo
+*.dll
+*.pdb
+*.cache
