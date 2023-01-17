@@ -9,23 +9,9 @@
 *.user
 *.userosscache
 *.sln.docstates
-.vs
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-[Oo]bj
-[Bb]in
-*.user
-*.suo
-*.[Cc]ache
-*.bak
-*.ncb
-*.log 
-*.DS_Store
-[Tt]humbs.db 
-_ReSharper.*
-*.resharper
-Ankh.NoLoad
 
 # Mono auto generated files
 mono_crash.*
@@ -375,14 +361,3 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-.vs/PassManager/DesignTimeBuild/.dtbcache.v2
-.vs/PassManager/v17/.futdcache.v2
-.vs/PassManager/v17/.suo
-.vs/ProjectEvaluation/passmanager.metadata.v5.2
-.vs/ProjectEvaluation/passmanager.projects.v5.2
-*.v2
-*.2
-.vs/PassManager/v17/.suo
-*.dll
-*.pdb
-*.cache
