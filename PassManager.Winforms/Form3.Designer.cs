@@ -30,9 +30,13 @@
         {
             this.VersionText = new System.Windows.Forms.Label();
             this.MainMenu = new System.Windows.Forms.Panel();
+            this.DashboardButtonImage = new System.Windows.Forms.PictureBox();
+            this.DashboardButton = new System.Windows.Forms.Button();
+            this.Seperator = new System.Windows.Forms.Label();
             this.ProfileName = new System.Windows.Forms.Label();
             this.ProfilePicture = new System.Windows.Forms.PictureBox();
             this.MainMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DashboardButtonImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +59,9 @@
             // MainMenu
             // 
             this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.MainMenu.Controls.Add(this.DashboardButtonImage);
+            this.MainMenu.Controls.Add(this.DashboardButton);
+            this.MainMenu.Controls.Add(this.Seperator);
             this.MainMenu.Controls.Add(this.ProfileName);
             this.MainMenu.Controls.Add(this.ProfilePicture);
             this.MainMenu.Controls.Add(this.VersionText);
@@ -63,6 +70,43 @@
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(225, 548);
             this.MainMenu.TabIndex = 4;
+            // 
+            // DashboardButtonImage
+            // 
+            this.DashboardButtonImage.BackColor = System.Drawing.Color.Transparent;
+            this.DashboardButtonImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DashboardButtonImage.Image = global::PassManager.Winforms.Properties.Resources.PassManagerLock;
+            this.DashboardButtonImage.Location = new System.Drawing.Point(26, 115);
+            this.DashboardButtonImage.Name = "DashboardButtonImage";
+            this.DashboardButtonImage.Size = new System.Drawing.Size(24, 29);
+            this.DashboardButtonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.DashboardButtonImage.TabIndex = 8;
+            this.DashboardButtonImage.TabStop = false;
+            // 
+            // DashboardButton
+            // 
+            this.DashboardButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DashboardButton.FlatAppearance.BorderSize = 0;
+            this.DashboardButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.DashboardButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.DashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DashboardButton.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DashboardButton.ForeColor = System.Drawing.Color.White;
+            this.DashboardButton.Location = new System.Drawing.Point(0, 103);
+            this.DashboardButton.Name = "DashboardButton";
+            this.DashboardButton.Size = new System.Drawing.Size(258, 57);
+            this.DashboardButton.TabIndex = 7;
+            this.DashboardButton.Text = "Dashboard";
+            this.DashboardButton.UseVisualStyleBackColor = true;
+            // 
+            // Seperator
+            // 
+            this.Seperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.Seperator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Seperator.Location = new System.Drawing.Point(-6, 85);
+            this.Seperator.Name = "Seperator";
+            this.Seperator.Size = new System.Drawing.Size(235, 5);
+            this.Seperator.TabIndex = 6;
             // 
             // ProfileName
             // 
@@ -100,6 +144,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PMDashboard_FormClosing);
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DashboardButtonImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).EndInit();
             this.ResumeLayout(false);
 
@@ -111,5 +156,8 @@
         private Panel MainMenu;
         private PictureBox ProfilePicture;
         private Label ProfileName;
+        private Label Seperator;
+        private Button DashboardButton;
+        private PictureBox DashboardButtonImage;
     }
 }
