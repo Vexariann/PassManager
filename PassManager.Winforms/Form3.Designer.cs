@@ -30,7 +30,10 @@
         {
             this.VersionText = new System.Windows.Forms.Label();
             this.MainMenu = new System.Windows.Forms.Panel();
+            this.ProfileName = new System.Windows.Forms.Label();
+            this.ProfilePicture = new System.Windows.Forms.PictureBox();
             this.MainMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // VersionText
@@ -52,12 +55,35 @@
             // MainMenu
             // 
             this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.MainMenu.Controls.Add(this.ProfileName);
+            this.MainMenu.Controls.Add(this.ProfilePicture);
             this.MainMenu.Controls.Add(this.VersionText);
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Margin = new System.Windows.Forms.Padding(0);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(225, 548);
             this.MainMenu.TabIndex = 4;
+            // 
+            // ProfileName
+            // 
+            this.ProfileName.AutoSize = true;
+            this.ProfileName.BackColor = System.Drawing.Color.Transparent;
+            this.ProfileName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ProfileName.ForeColor = System.Drawing.Color.White;
+            this.ProfileName.Location = new System.Drawing.Point(78, 34);
+            this.ProfileName.Name = "ProfileName";
+            this.ProfileName.Size = new System.Drawing.Size(105, 24);
+            this.ProfileName.TabIndex = 5;
+            this.ProfileName.Text = "Username";
+            // 
+            // ProfilePicture
+            // 
+            this.ProfilePicture.BackColor = System.Drawing.Color.White;
+            this.ProfilePicture.Location = new System.Drawing.Point(12, 12);
+            this.ProfilePicture.Name = "ProfilePicture";
+            this.ProfilePicture.Size = new System.Drawing.Size(60, 60);
+            this.ProfilePicture.TabIndex = 4;
+            this.ProfilePicture.TabStop = false;
             // 
             // PMDashboard
             // 
@@ -71,8 +97,10 @@
             this.Name = "PMDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Passmanager - Dashboard";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PMDashboard_FormClosing);
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -81,5 +109,7 @@
 
         private Label VersionText;
         private Panel MainMenu;
+        private PictureBox ProfilePicture;
+        private Label ProfileName;
     }
 }
