@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginWindow));
             this.LoginButton = new System.Windows.Forms.Button();
             this.LoginCancelButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@
             this.LoginButton.ForeColor = System.Drawing.Color.DimGray;
             this.LoginButton.Location = new System.Drawing.Point(107, 202);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(175, 47);
+            this.LoginButton.Size = new System.Drawing.Size(193, 47);
             this.LoginButton.TabIndex = 2;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = false;
@@ -72,7 +73,7 @@
             this.LoginCancelButton.ForeColor = System.Drawing.Color.DimGray;
             this.LoginCancelButton.Location = new System.Drawing.Point(107, 269);
             this.LoginCancelButton.Name = "LoginCancelButton";
-            this.LoginCancelButton.Size = new System.Drawing.Size(175, 47);
+            this.LoginCancelButton.Size = new System.Drawing.Size(193, 47);
             this.LoginCancelButton.TabIndex = 3;
             this.LoginCancelButton.Text = "Cancel";
             this.LoginCancelButton.UseVisualStyleBackColor = false;
@@ -101,13 +102,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(390, 320);
+            this.ClientSize = new System.Drawing.Size(386, 316);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LoginCancelButton);
             this.Controls.Add(this.LoginButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginWindow";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

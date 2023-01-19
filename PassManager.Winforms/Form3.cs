@@ -20,5 +20,10 @@
         {
             Application.Exit();
         }
+
+        private void PasswordList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
