@@ -30,6 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PMDashboard));
             this.DashboardPanel = new System.Windows.Forms.Panel();
+            this.AddPasswordButton = new System.Windows.Forms.Button();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.PasswordTitleLabel = new System.Windows.Forms.Label();
+            this.UsernameLabel = new System.Windows.Forms.Label();
+            this.UsernameTitleLabel = new System.Windows.Forms.Label();
+            this.PasswordRevealButton = new System.Windows.Forms.Button();
+            this.PasswordThumbnail = new System.Windows.Forms.PictureBox();
+            this.PasswordList = new System.Windows.Forms.ListBox();
+            this.filterMenu = new System.Windows.Forms.ComboBox();
+            this.SearchBox = new System.Windows.Forms.TextBox();
+            this.ProfilePanel = new System.Windows.Forms.Panel();
+            this.ProfilePageUsername = new System.Windows.Forms.Label();
+            this.ProfilePicturePage = new System.Windows.Forms.PictureBox();
             this.MainMenu = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.OptionsButton = new System.Windows.Forms.Button();
@@ -43,35 +56,21 @@
             this.ProfileName = new System.Windows.Forms.Label();
             this.ProfilePicture = new System.Windows.Forms.PictureBox();
             this.VersionText = new System.Windows.Forms.Label();
-            this.ProfilePanel = new System.Windows.Forms.Panel();
-            this.ProfilePageUsername = new System.Windows.Forms.Label();
-            this.ProfilePicturePage = new System.Windows.Forms.PictureBox();
-            this.AddPasswordButton = new System.Windows.Forms.Button();
-            this.PasswordLabel = new System.Windows.Forms.Label();
-            this.PasswordTitleLabel = new System.Windows.Forms.Label();
-            this.UsernameLabel = new System.Windows.Forms.Label();
-            this.UsernameTitleLabel = new System.Windows.Forms.Label();
-            this.PasswordRevealButton = new System.Windows.Forms.Button();
-            this.PasswordThumbnail = new System.Windows.Forms.PictureBox();
-            this.PasswordList = new System.Windows.Forms.ListBox();
-            this.filterMenu = new System.Windows.Forms.ComboBox();
-            this.SearchBox = new System.Windows.Forms.TextBox();
             this.DashboardPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswordThumbnail)).BeginInit();
+            this.ProfilePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicturePage)).BeginInit();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ManageButtonImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileButtonImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DashboardButtonImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
-            this.ProfilePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicturePage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PasswordThumbnail)).BeginInit();
             this.SuspendLayout();
             // 
             // DashboardPanel
             // 
             this.DashboardPanel.BackColor = System.Drawing.Color.Transparent;
-            this.DashboardPanel.Controls.Add(this.ProfilePanel);
             this.DashboardPanel.Controls.Add(this.AddPasswordButton);
             this.DashboardPanel.Controls.Add(this.PasswordLabel);
             this.DashboardPanel.Controls.Add(this.PasswordTitleLabel);
@@ -82,11 +81,160 @@
             this.DashboardPanel.Controls.Add(this.PasswordList);
             this.DashboardPanel.Controls.Add(this.filterMenu);
             this.DashboardPanel.Controls.Add(this.SearchBox);
-            this.DashboardPanel.Location = new System.Drawing.Point(225, 0);
+            this.DashboardPanel.Location = new System.Drawing.Point(593, 103);
             this.DashboardPanel.Margin = new System.Windows.Forms.Padding(0);
             this.DashboardPanel.Name = "DashboardPanel";
             this.DashboardPanel.Size = new System.Drawing.Size(558, 548);
             this.DashboardPanel.TabIndex = 15;
+            // 
+            // AddPasswordButton
+            // 
+            this.AddPasswordButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddPasswordButton.Location = new System.Drawing.Point(20, 516);
+            this.AddPasswordButton.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.AddPasswordButton.Name = "AddPasswordButton";
+            this.AddPasswordButton.Size = new System.Drawing.Size(114, 29);
+            this.AddPasswordButton.TabIndex = 10;
+            this.AddPasswordButton.Text = "Add password";
+            this.AddPasswordButton.UseVisualStyleBackColor = true;
+            // 
+            // PasswordLabel
+            // 
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PasswordLabel.Location = new System.Drawing.Point(329, 328);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(101, 21);
+            this.PasswordLabel.TabIndex = 9;
+            this.PasswordLabel.Text = "*************";
+            this.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PasswordTitleLabel
+            // 
+            this.PasswordTitleLabel.AutoSize = true;
+            this.PasswordTitleLabel.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PasswordTitleLabel.Location = new System.Drawing.Point(329, 293);
+            this.PasswordTitleLabel.Name = "PasswordTitleLabel";
+            this.PasswordTitleLabel.Size = new System.Drawing.Size(94, 21);
+            this.PasswordTitleLabel.TabIndex = 8;
+            this.PasswordTitleLabel.Text = "Password:";
+            // 
+            // UsernameLabel
+            // 
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UsernameLabel.Location = new System.Drawing.Point(329, 249);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(152, 21);
+            this.UsernameLabel.TabIndex = 7;
+            this.UsernameLabel.Text = "SampleUsername";
+            this.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // UsernameTitleLabel
+            // 
+            this.UsernameTitleLabel.AutoSize = true;
+            this.UsernameTitleLabel.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UsernameTitleLabel.Location = new System.Drawing.Point(556, 244);
+            this.UsernameTitleLabel.Name = "UsernameTitleLabel";
+            this.UsernameTitleLabel.Size = new System.Drawing.Size(97, 21);
+            this.UsernameTitleLabel.TabIndex = 6;
+            this.UsernameTitleLabel.Text = "Username:";
+            // 
+            // PasswordRevealButton
+            // 
+            this.PasswordRevealButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PasswordRevealButton.Location = new System.Drawing.Point(375, 467);
+            this.PasswordRevealButton.Name = "PasswordRevealButton";
+            this.PasswordRevealButton.Size = new System.Drawing.Size(147, 29);
+            this.PasswordRevealButton.TabIndex = 5;
+            this.PasswordRevealButton.Text = "Reveal Information";
+            this.PasswordRevealButton.UseVisualStyleBackColor = true;
+            // 
+            // PasswordThumbnail
+            // 
+            this.PasswordThumbnail.BackColor = System.Drawing.Color.White;
+            this.PasswordThumbnail.Location = new System.Drawing.Point(329, 43);
+            this.PasswordThumbnail.Name = "PasswordThumbnail";
+            this.PasswordThumbnail.Size = new System.Drawing.Size(216, 180);
+            this.PasswordThumbnail.TabIndex = 4;
+            this.PasswordThumbnail.TabStop = false;
+            // 
+            // PasswordList
+            // 
+            this.PasswordList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
+            this.PasswordList.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PasswordList.FormattingEnabled = true;
+            this.PasswordList.HorizontalExtent = 265;
+            this.PasswordList.HorizontalScrollbar = true;
+            this.PasswordList.ItemHeight = 21;
+            this.PasswordList.Items.AddRange(new object[] {
+            "Password 1",
+            "Password 2",
+            "Password 3",
+            "Password 4",
+            "Password 5",
+            "Password 6"});
+            this.PasswordList.Location = new System.Drawing.Point(20, 43);
+            this.PasswordList.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.PasswordList.Name = "PasswordList";
+            this.PasswordList.Size = new System.Drawing.Size(303, 466);
+            this.PasswordList.TabIndex = 3;
+            this.PasswordList.SelectedIndexChanged += new System.EventHandler(this.PasswordList_SelectedIndexChanged);
+            // 
+            // filterMenu
+            // 
+            this.filterMenu.BackColor = System.Drawing.Color.White;
+            this.filterMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.filterMenu.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.filterMenu.Items.AddRange(new object[] {
+            "Alphabetical",
+            "Date added",
+            "With star"});
+            this.filterMenu.Location = new System.Drawing.Point(172, 12);
+            this.filterMenu.Name = "filterMenu";
+            this.filterMenu.Size = new System.Drawing.Size(151, 25);
+            this.filterMenu.TabIndex = 2;
+            // 
+            // SearchBox
+            // 
+            this.SearchBox.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SearchBox.Location = new System.Drawing.Point(20, 12);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.PlaceholderText = "Search...";
+            this.SearchBox.Size = new System.Drawing.Size(146, 25);
+            this.SearchBox.TabIndex = 1;
+            // 
+            // ProfilePanel
+            // 
+            this.ProfilePanel.BackColor = System.Drawing.Color.Transparent;
+            this.ProfilePanel.Controls.Add(this.ProfilePageUsername);
+            this.ProfilePanel.Controls.Add(this.ProfilePicturePage);
+            this.ProfilePanel.Location = new System.Drawing.Point(457, 292);
+            this.ProfilePanel.Margin = new System.Windows.Forms.Padding(0);
+            this.ProfilePanel.Name = "ProfilePanel";
+            this.ProfilePanel.Size = new System.Drawing.Size(559, 548);
+            this.ProfilePanel.TabIndex = 17;
+            // 
+            // ProfilePageUsername
+            // 
+            this.ProfilePageUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ProfilePageUsername.AutoSize = true;
+            this.ProfilePageUsername.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ProfilePageUsername.Location = new System.Drawing.Point(124, 178);
+            this.ProfilePageUsername.Name = "ProfilePageUsername";
+            this.ProfilePageUsername.Size = new System.Drawing.Size(337, 45);
+            this.ProfilePageUsername.TabIndex = 16;
+            this.ProfilePageUsername.Text = "SampleUsername";
+            this.ProfilePageUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ProfilePicturePage
+            // 
+            this.ProfilePicturePage.BackColor = System.Drawing.Color.White;
+            this.ProfilePicturePage.Location = new System.Drawing.Point(215, 12);
+            this.ProfilePicturePage.Name = "ProfilePicturePage";
+            this.ProfilePicturePage.Size = new System.Drawing.Size(150, 150);
+            this.ProfilePicturePage.TabIndex = 15;
+            this.ProfilePicturePage.TabStop = false;
             // 
             // MainMenu
             // 
@@ -192,6 +340,7 @@
             this.ProfileButton.TabIndex = 9;
             this.ProfileButton.Text = "Profile";
             this.ProfileButton.UseVisualStyleBackColor = true;
+            this.ProfileButton.Click += new System.EventHandler(this.ProfileButton_Click);
             // 
             // DashboardButtonImage
             // 
@@ -220,6 +369,7 @@
             this.DashboardButton.TabIndex = 7;
             this.DashboardButton.Text = "Dashboard";
             this.DashboardButton.UseVisualStyleBackColor = true;
+            this.DashboardButton.Click += new System.EventHandler(this.DashboardButton_Click);
             // 
             // Seperator
             // 
@@ -267,172 +417,28 @@
             this.VersionText.Text = "V0.0001 BETA build - Vexarian 2022";
             this.VersionText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ProfilePanel
-            // 
-            this.ProfilePanel.BackColor = System.Drawing.Color.Transparent;
-            this.ProfilePanel.Controls.Add(this.ProfilePageUsername);
-            this.ProfilePanel.Controls.Add(this.ProfilePicturePage);
-            this.ProfilePanel.Location = new System.Drawing.Point(137, 85);
-            this.ProfilePanel.Margin = new System.Windows.Forms.Padding(0);
-            this.ProfilePanel.Name = "ProfilePanel";
-            this.ProfilePanel.Size = new System.Drawing.Size(559, 548);
-            this.ProfilePanel.TabIndex = 17;
-            // 
-            // ProfilePageUsername
-            // 
-            this.ProfilePageUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ProfilePageUsername.AutoSize = true;
-            this.ProfilePageUsername.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ProfilePageUsername.Location = new System.Drawing.Point(22, 167);
-            this.ProfilePageUsername.Name = "ProfilePageUsername";
-            this.ProfilePageUsername.Size = new System.Drawing.Size(337, 45);
-            this.ProfilePageUsername.TabIndex = 16;
-            this.ProfilePageUsername.Text = "SampleUsername";
-            this.ProfilePageUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ProfilePicturePage
-            // 
-            this.ProfilePicturePage.BackColor = System.Drawing.Color.White;
-            this.ProfilePicturePage.Location = new System.Drawing.Point(215, 12);
-            this.ProfilePicturePage.Name = "ProfilePicturePage";
-            this.ProfilePicturePage.Size = new System.Drawing.Size(150, 150);
-            this.ProfilePicturePage.TabIndex = 15;
-            this.ProfilePicturePage.TabStop = false;
-            // 
-            // AddPasswordButton
-            // 
-            this.AddPasswordButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddPasswordButton.Location = new System.Drawing.Point(20, 516);
-            this.AddPasswordButton.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.AddPasswordButton.Name = "AddPasswordButton";
-            this.AddPasswordButton.Size = new System.Drawing.Size(114, 29);
-            this.AddPasswordButton.TabIndex = 10;
-            this.AddPasswordButton.Text = "Add password";
-            this.AddPasswordButton.UseVisualStyleBackColor = true;
-            // 
-            // PasswordLabel
-            // 
-            this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PasswordLabel.Location = new System.Drawing.Point(329, 328);
-            this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(101, 21);
-            this.PasswordLabel.TabIndex = 9;
-            this.PasswordLabel.Text = "*************";
-            this.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PasswordTitleLabel
-            // 
-            this.PasswordTitleLabel.AutoSize = true;
-            this.PasswordTitleLabel.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PasswordTitleLabel.Location = new System.Drawing.Point(329, 293);
-            this.PasswordTitleLabel.Name = "PasswordTitleLabel";
-            this.PasswordTitleLabel.Size = new System.Drawing.Size(94, 21);
-            this.PasswordTitleLabel.TabIndex = 8;
-            this.PasswordTitleLabel.Text = "Password:";
-            // 
-            // UsernameLabel
-            // 
-            this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UsernameLabel.Location = new System.Drawing.Point(329, 249);
-            this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(152, 21);
-            this.UsernameLabel.TabIndex = 7;
-            this.UsernameLabel.Text = "SampleUsername";
-            this.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // UsernameTitleLabel
-            // 
-            this.UsernameTitleLabel.AutoSize = true;
-            this.UsernameTitleLabel.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UsernameTitleLabel.Location = new System.Drawing.Point(556, 244);
-            this.UsernameTitleLabel.Name = "UsernameTitleLabel";
-            this.UsernameTitleLabel.Size = new System.Drawing.Size(97, 21);
-            this.UsernameTitleLabel.TabIndex = 6;
-            this.UsernameTitleLabel.Text = "Username:";
-            // 
-            // PasswordRevealButton
-            // 
-            this.PasswordRevealButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PasswordRevealButton.Location = new System.Drawing.Point(382, 464);
-            this.PasswordRevealButton.Name = "PasswordRevealButton";
-            this.PasswordRevealButton.Size = new System.Drawing.Size(147, 29);
-            this.PasswordRevealButton.TabIndex = 5;
-            this.PasswordRevealButton.Text = "Reveal Information";
-            this.PasswordRevealButton.UseVisualStyleBackColor = true;
-            // 
-            // PasswordThumbnail
-            // 
-            this.PasswordThumbnail.BackColor = System.Drawing.Color.White;
-            this.PasswordThumbnail.Location = new System.Drawing.Point(329, 43);
-            this.PasswordThumbnail.Name = "PasswordThumbnail";
-            this.PasswordThumbnail.Size = new System.Drawing.Size(226, 180);
-            this.PasswordThumbnail.TabIndex = 4;
-            this.PasswordThumbnail.TabStop = false;
-            // 
-            // PasswordList
-            // 
-            this.PasswordList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
-            this.PasswordList.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PasswordList.FormattingEnabled = true;
-            this.PasswordList.HorizontalExtent = 265;
-            this.PasswordList.HorizontalScrollbar = true;
-            this.PasswordList.ItemHeight = 21;
-            this.PasswordList.Items.AddRange(new object[] {
-            "Password 1",
-            "Password 2",
-            "Password 3",
-            "Password 4",
-            "Password 5",
-            "Password 6"});
-            this.PasswordList.Location = new System.Drawing.Point(20, 43);
-            this.PasswordList.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.PasswordList.Name = "PasswordList";
-            this.PasswordList.Size = new System.Drawing.Size(303, 466);
-            this.PasswordList.TabIndex = 3;
-            this.PasswordList.SelectedIndexChanged += new System.EventHandler(this.PasswordList_SelectedIndexChanged);
-            // 
-            // filterMenu
-            // 
-            this.filterMenu.BackColor = System.Drawing.Color.White;
-            this.filterMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.filterMenu.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.filterMenu.Items.AddRange(new object[] {
-            "Alphabetical",
-            "Date added",
-            "With star"});
-            this.filterMenu.Location = new System.Drawing.Point(172, 12);
-            this.filterMenu.Name = "filterMenu";
-            this.filterMenu.Size = new System.Drawing.Size(151, 25);
-            this.filterMenu.TabIndex = 2;
-            // 
-            // SearchBox
-            // 
-            this.SearchBox.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SearchBox.Location = new System.Drawing.Point(20, 12);
-            this.SearchBox.Name = "SearchBox";
-            this.SearchBox.PlaceholderText = "Search...";
-            this.SearchBox.Size = new System.Drawing.Size(146, 25);
-            this.SearchBox.TabIndex = 1;
-            // 
             // PMDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(782, 548);
-            this.Controls.Add(this.MainMenu);
+            this.Controls.Add(this.ProfilePanel);
             this.Controls.Add(this.DashboardPanel);
+            this.Controls.Add(this.MainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "PMDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Passmanager - Dashboard";
+            this.Text = "PassManager - Dashboard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PMDashboard_FormClosing);
             this.DashboardPanel.ResumeLayout(false);
             this.DashboardPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswordThumbnail)).EndInit();
+            this.ProfilePanel.ResumeLayout(false);
+            this.ProfilePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicturePage)).EndInit();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -440,10 +446,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProfileButtonImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DashboardButtonImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).EndInit();
-            this.ProfilePanel.ResumeLayout(false);
-            this.ProfilePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicturePage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PasswordThumbnail)).EndInit();
             this.ResumeLayout(false);
 
         }

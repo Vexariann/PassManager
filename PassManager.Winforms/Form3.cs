@@ -19,8 +19,13 @@
             ProfilePicture.Region = rg;
             ProfilePicturePage.Region = rn;
 
-            //HideAllPanels();
-            DashboardPanel.BringToFront();
+            // These are here to make sure the panels are in the right place stacked on top of each other.
+            // Unfortunately I cannot stack them on top in the editor mode.
+            DashboardPanel.Location = new Point(225, 0);
+            ProfilePanel.Location = new Point(225, 0);
+
+            HideAllPanels();
+            DashboardPanel.Visible = true;
         }
 
         private void PMDashboard_FormClosing(object sender, FormClosingEventArgs e)
@@ -35,14 +40,16 @@
 
         private void DashboardButton_Click(object sender, EventArgs e)
         {
-            //HideAllPanels();
-            DashboardPanel.BringToFront();
+            PMDashboard.ActiveForm.Text = "PassManager - Dashboard";
+            HideAllPanels();
+            DashboardPanel.Visible = true;
         }
 
         private void ProfileButton_Click(object sender, EventArgs e)
         {
-            //HideAllPanels();
-            ProfilePanel.BringToFront();
+            PMDashboard.ActiveForm.Text = "PassManager - Profile";
+            HideAllPanels();
+            ProfilePanel.Visible = true;
         }
 
         private void HideAllPanels()
