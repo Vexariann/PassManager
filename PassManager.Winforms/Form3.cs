@@ -23,6 +23,8 @@
             // Unfortunately I cannot stack them on top in the editor mode.
             DashboardPanel.Location = new Point(225, 0);
             ProfilePanel.Location = new Point(225, 0);
+            ManagePanel.Location = new Point(225, 0);
+            OptionsPanel.Location = new Point(225, 0);
 
             HideAllPanels();
             DashboardPanel.Visible = true;
@@ -40,6 +42,7 @@
 
         private void DashboardButton_Click(object sender, EventArgs e)
         {
+            // Could be simplefied
             PMDashboard.ActiveForm.Text = "PassManager - Dashboard";
             HideAllPanels();
             DashboardPanel.Visible = true;
@@ -52,10 +55,24 @@
             ProfilePanel.Visible = true;
         }
 
+        private void ManageButton_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            ManagePanel.Visible = true;
+        }
+
+        private void OptionsButton_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            OptionsPanel.Visible = true;
+        }
+
         private void HideAllPanels()
         {
             DashboardPanel.Visible = false;
             ProfilePanel.Visible = false;
+            ManagePanel.Visible = false;
+            OptionsPanel.Visible = false;
         }
     }
 }

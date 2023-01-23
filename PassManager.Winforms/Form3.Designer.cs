@@ -56,6 +56,13 @@
             this.ProfileName = new System.Windows.Forms.Label();
             this.ProfilePicture = new System.Windows.Forms.PictureBox();
             this.VersionText = new System.Windows.Forms.Label();
+            this.ManagePanel = new System.Windows.Forms.Panel();
+            this.GeneratePasswordBox = new System.Windows.Forms.TextBox();
+            this.GenerateButton = new System.Windows.Forms.Button();
+            this.OptionsPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.RememberMeInfo = new System.Windows.Forms.Label();
+            this.RememberMeCheckbox = new System.Windows.Forms.CheckBox();
             this.DashboardPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordThumbnail)).BeginInit();
             this.ProfilePanel.SuspendLayout();
@@ -66,6 +73,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProfileButtonImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DashboardButtonImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
+            this.ManagePanel.SuspendLayout();
+            this.OptionsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // DashboardPanel
@@ -284,6 +293,7 @@
             this.OptionsButton.TabIndex = 13;
             this.OptionsButton.Text = "Options";
             this.OptionsButton.UseVisualStyleBackColor = true;
+            this.OptionsButton.Click += new System.EventHandler(this.OptionsButton_Click);
             // 
             // ManageButtonImage
             // 
@@ -312,6 +322,7 @@
             this.ManageButton.TabIndex = 11;
             this.ManageButton.Text = "Manage";
             this.ManageButton.UseVisualStyleBackColor = true;
+            this.ManageButton.Click += new System.EventHandler(this.ManageButton_Click);
             // 
             // ProfileButtonImage
             // 
@@ -417,12 +428,82 @@
             this.VersionText.Text = "V0.0001 BETA build - Vexarian 2022";
             this.VersionText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ManagePanel
+            // 
+            this.ManagePanel.BackColor = System.Drawing.Color.Transparent;
+            this.ManagePanel.Controls.Add(this.GeneratePasswordBox);
+            this.ManagePanel.Controls.Add(this.GenerateButton);
+            this.ManagePanel.Location = new System.Drawing.Point(370, 241);
+            this.ManagePanel.Margin = new System.Windows.Forms.Padding(0);
+            this.ManagePanel.Name = "ManagePanel";
+            this.ManagePanel.Size = new System.Drawing.Size(559, 548);
+            this.ManagePanel.TabIndex = 18;
+            // 
+            // GeneratePasswordBox
+            // 
+            this.GeneratePasswordBox.Location = new System.Drawing.Point(49, 196);
+            this.GeneratePasswordBox.Name = "GeneratePasswordBox";
+            this.GeneratePasswordBox.Size = new System.Drawing.Size(466, 27);
+            this.GeneratePasswordBox.TabIndex = 1;
+            // 
+            // GenerateButton
+            // 
+            this.GenerateButton.Location = new System.Drawing.Point(176, 229);
+            this.GenerateButton.Name = "GenerateButton";
+            this.GenerateButton.Size = new System.Drawing.Size(228, 29);
+            this.GenerateButton.TabIndex = 0;
+            this.GenerateButton.Text = "Generate random password";
+            this.GenerateButton.UseVisualStyleBackColor = true;
+            // 
+            // OptionsPanel
+            // 
+            this.OptionsPanel.BackColor = System.Drawing.Color.Transparent;
+            this.OptionsPanel.Controls.Add(this.label1);
+            this.OptionsPanel.Controls.Add(this.RememberMeInfo);
+            this.OptionsPanel.Controls.Add(this.RememberMeCheckbox);
+            this.OptionsPanel.Location = new System.Drawing.Point(225, 0);
+            this.OptionsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.OptionsPanel.Name = "OptionsPanel";
+            this.OptionsPanel.Size = new System.Drawing.Size(559, 548);
+            this.OptionsPanel.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(294, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "once every 5 minutes instead of every time.";
+            // 
+            // RememberMeInfo
+            // 
+            this.RememberMeInfo.AutoSize = true;
+            this.RememberMeInfo.Location = new System.Drawing.Point(28, 61);
+            this.RememberMeInfo.Name = "RememberMeInfo";
+            this.RememberMeInfo.Size = new System.Drawing.Size(493, 20);
+            this.RememberMeInfo.TabIndex = 1;
+            this.RememberMeInfo.Text = "Toggling this on makes it so you only have to fill in your master password";
+            // 
+            // RememberMeCheckbox
+            // 
+            this.RememberMeCheckbox.AutoSize = true;
+            this.RememberMeCheckbox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RememberMeCheckbox.Location = new System.Drawing.Point(28, 31);
+            this.RememberMeCheckbox.Name = "RememberMeCheckbox";
+            this.RememberMeCheckbox.Size = new System.Drawing.Size(162, 27);
+            this.RememberMeCheckbox.TabIndex = 0;
+            this.RememberMeCheckbox.Text = "Remember me";
+            this.RememberMeCheckbox.UseVisualStyleBackColor = true;
+            // 
             // PMDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(782, 548);
+            this.Controls.Add(this.OptionsPanel);
+            this.Controls.Add(this.ManagePanel);
             this.Controls.Add(this.ProfilePanel);
             this.Controls.Add(this.DashboardPanel);
             this.Controls.Add(this.MainMenu);
@@ -446,6 +527,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProfileButtonImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DashboardButtonImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).EndInit();
+            this.ManagePanel.ResumeLayout(false);
+            this.ManagePanel.PerformLayout();
+            this.OptionsPanel.ResumeLayout(false);
+            this.OptionsPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -478,5 +563,12 @@
         private Label ProfileName;
         private PictureBox ProfilePicture;
         private Label VersionText;
+        public Panel ManagePanel;
+        private TextBox GeneratePasswordBox;
+        private Button GenerateButton;
+        public Panel OptionsPanel;
+        private Label label1;
+        private Label RememberMeInfo;
+        private CheckBox RememberMeCheckbox;
     }
 }
