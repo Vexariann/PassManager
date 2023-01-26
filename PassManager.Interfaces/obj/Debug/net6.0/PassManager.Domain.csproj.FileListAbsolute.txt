@@ -18,3 +18,5 @@ C:\Users\Julia\Desktop\ITVitae bestanden\PassManager_BROKEN\PassManager.Interfac
 C:\Users\Julia\Desktop\ITVitae bestanden\PassManager_BROKEN\PassManager.Interfaces\obj\Debug\net6.0\PassManager.Domain.dll
 C:\Users\Julia\Desktop\ITVitae bestanden\PassManager_BROKEN\PassManager.Interfaces\obj\Debug\net6.0\refint\PassManager.Domain.dll
 C:\Users\Julia\Desktop\ITVitae bestanden\PassManager_BROKEN\PassManager.Interfaces\obj\Debug\net6.0\PassManager.Domain.pdb
+C:\Users\Julia\Desktop\ITVitae bestanden\PassManager\PassManager.Interfaces\bin\Debug\net6.0\PassManager.Domain.runtimeconfig.json
+C:\Users\Julia\Desktop\ITVitae bestanden\PassManager\PassManager.Interfaces\obj\Debug\net6.0\PassManager.Domain.genruntimeconfig.cache
