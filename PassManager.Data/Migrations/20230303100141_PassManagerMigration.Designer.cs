@@ -11,7 +11,7 @@ using PassManager.Data;
 namespace PassManager.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230126144800_PassManagerMigration")]
+    [Migration("20230303100141_PassManagerMigration")]
     partial class PassManagerMigration
     {
         /// <inheritdoc />
@@ -53,7 +53,13 @@ namespace PassManager.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
+                    b.Property<bool>("Favorite")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tag")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Thumbnail")
@@ -69,7 +75,7 @@ namespace PassManager.Data.Migrations
 
                     b.HasIndex("UserID");
 
-                    b.ToTable("Brands");
+                    b.ToTable("StoredPassword");
                 });
 
             modelBuilder.Entity("PassManager.Domain.Models.User", b =>
@@ -91,7 +97,7 @@ namespace PassManager.Data.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Phones");
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("PassManager.Domain.Models.Options", b =>

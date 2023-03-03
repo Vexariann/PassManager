@@ -14,8 +14,8 @@ namespace PassManager.Data
             base.OnConfiguring(optionsBuilder);
         }
 
-        public DbSet<User> Phones { get; set; }
-        public DbSet<StoredPassword> Brands { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<StoredPassword> StoredPassword { get; set; }
         public DbSet<Options> Options { get; set; }
     }
 }
