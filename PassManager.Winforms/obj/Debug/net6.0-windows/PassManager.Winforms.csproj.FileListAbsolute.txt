@@ -106,3 +106,4 @@ C:\Users\Julia\Desktop\ITVitae bestanden\PassManager\PassManager.Winforms\bin\De
 C:\Users\Julia\Desktop\ITVitae bestanden\PassManager\PassManager.Winforms\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Julia\Desktop\ITVitae bestanden\PassManager\PassManager.Winforms\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Julia\Desktop\ITVitae bestanden\PassManager\PassManager.Winforms\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+C:\Users\Julia\Desktop\ITVitae bestanden\PassManager\PassManager.Winforms\obj\Debug\net6.0-windows\PassManager.Winforms.DebugForm.resources

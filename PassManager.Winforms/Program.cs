@@ -20,6 +20,7 @@ namespace PassManager
             services.AddScoped<PMHome>();
             services.AddScoped<LoginWindow>();
             services.AddScoped<PMDashboard>();
+            services.AddScoped<DebugForm>();
             services.AddScoped<Rootobject>();
 
             Services.ServiceProvider = services.BuildServiceProvider();

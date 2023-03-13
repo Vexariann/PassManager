@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+PassManager.Winforms/obj/Debug/net6.0-windows/PassManager.Winforms.csproj.AssemblyReference.cache
+PassManager.Winforms/obj/Debug/net6.0-windows/PassManager.Winforms.csproj.CoreCompileInputs.cache
+PassManager.Winforms/obj/Debug/net6.0-windows/PassManager.Winforms.dll
+PassManager.Winforms/obj/Debug/net6.0-windows/PassManager.Winforms.pdb
+PassManager.Winforms/obj/Debug/net6.0-windows/ref/PassManager.Winforms.dll
+PassManager.Winforms/obj/Debug/net6.0-windows/refint/PassManager.Winforms.dll
