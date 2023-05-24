@@ -1,0 +1,68 @@
+.title {
+    font-size: 100px;
+    font-weight: bold;
+    color: #505050;
+    padding-top: 100px;
+    opacity: 1;
+    animation: fadein 5s ease-in-out;
+}
+
+/* Causes the fadein animation from the title on startup */
+@keyframes fadein {
+    0% {
+        padding-top: 30px;
+        opacity: 0;
+        padding-bottom: 70px;
+    }
+    100% {
+        padding-top: 100px;
+        opacity: 1;
+        padding-bottom: 0px;
+    }
+}
+
+/* The login and register button on the main page */
+.mainButton {
+    background-color: #A1CFFF;
+    color: #505050;
+    margin-top: 110px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.75);
+}
+
+.mainButton:hover {
+    background-color: #7dbafa;
+}
+
+/* The bubbles that make up the background on the main page */
+.bubble1 {
+    position: absolute;
+    margin-left: -500px;
+    margin-top: -900px;
+    width: 1500px;
+    height: 1500px;
+    border-radius: 100%;
+    border: 125px solid #C9E3FF;
+    z-index: -1;
+}
+.bubble2 {
+    position: absolute;
+    margin-right: -500px;
+    margin-bottom: -900px;
+    width: 1500px;
+    height: 1500px;
+    border-radius: 100%;
+    border: 125px solid #C9E3FF;
+    bottom:0;
+    right:0;
+    z-index: -1;
+}
+.bubble3 {
+    position: absolute;
+    z-index: -1;
+}
