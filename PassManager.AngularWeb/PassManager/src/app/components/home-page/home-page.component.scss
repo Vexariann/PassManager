@@ -25,11 +25,13 @@
 
 /* The login and register button on the main page */
 .mainButton {
-    float: left;
+    //float: left;
     background-color: #A1CFFF;
     color: #505050;
     margin-top: 100px;
-    width: 300px;
+    width: 30vw;
+    margin-left: 35vw;
+    margin-right: 35vw;
     height: 80px;
     line-height: 80px;
     font-size: 40px;
