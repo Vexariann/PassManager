@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PassManager';
+
+  currentYear: number = new Date().getFullYear();
 }
