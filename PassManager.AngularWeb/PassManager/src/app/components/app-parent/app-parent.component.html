@@ -1,1 +1,20 @@
-<p>app-parent works!</p>
+<!-- <mat-grid-list cols="5" rowHeight="100%">
+    <mat-grid-tile colspan="1" class="test">This is content in A</mat-grid-tile>
+    <mat-grid-tile colspan="4">This is content in B</mat-grid-tile>
+</mat-grid-list> -->
+
+<div class="pageWrapper">
+    <div class="sideNav">
+        <div class="usernameWrapper">
+            <img class="profilePicture" src="../../../assets/images/profilePicture.jpg">
+            <div class="username">Vexarian</div>
+        </div>
+        <div class="testbtn" (click)="showDashboard()">Dashboard</div>
+        <div class="testbtn" (click)="showProfile()">Profile</div>
+    </div>
+    <div class="pageContent">
+        <app-dashboard *ngIf="windowState===0"></app-dashboard>
+        <app-profile *ngIf="windowState===1"></app-profile>
+    </div>
+    <div class="version">V1.0.1 ALPHA - Vexarian 2022 - {{currentYear}}</div>
+</div>
