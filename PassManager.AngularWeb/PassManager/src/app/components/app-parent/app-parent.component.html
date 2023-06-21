@@ -9,12 +9,16 @@
             <img class="profilePicture" src="../../../assets/images/profilePicture.jpg">
             <div class="username">Vexarian</div>
         </div>
-        <div class="testbtn" (click)="showDashboard()">Dashboard</div>
-        <div class="testbtn" (click)="showProfile()">Profile</div>
+        <div class="sideNavButton" (click)="showDashboard()"><img class="sideNavButtonImage" src="../../../assets/images/PassManagerLock.png"> <div class="sideNavButtonText">Dashboard</div></div>
+        <div class="sideNavButton" (click)="showProfile()"><img class="sideNavButtonImage" src="../../../assets/images/PassManagerProfile.png"> <div class="sideNavButtonText">Profile</div></div>
+        <div class="sideNavButton" (click)="showGenerate()"><img class="sideNavButtonImage" src="../../../assets/images/PassManagerManage.png"> <div class="sideNavButtonText">Generate</div></div>
+        <div class="sideNavButton" (click)="showSettings()"><img class="sideNavButtonImage" src="../../../assets/images/PassManagerSettings.png"> <div class="sideNavButtonText">Settings</div></div>
     </div>
     <div class="pageContent">
-        <app-dashboard *ngIf="windowState===0"></app-dashboard>
-        <app-profile *ngIf="windowState===1"></app-profile>
+        <app-dashboard *ngIf="currentWindow===enum.Dashboard"></app-dashboard>
+        <app-profile *ngIf="currentWindow===enum.Profile"></app-profile>
+        <app-generate *ngIf="currentWindow===enum.Generate"></app-generate>
+        <app-settings *ngIf="currentWindow===enum.Settings"></app-settings>
     </div>
     <div class="version">V1.0.1 ALPHA - Vexarian 2022 - {{currentYear}}</div>
 </div>
