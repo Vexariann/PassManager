@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatGridList } from '@angular/material/grid-list';
 
-enum windowState {
+enum windows {
   Dashboard,
   Profile,
   Generate,
@@ -18,26 +18,26 @@ export class AppParentComponent {
   currentYear: number = new Date().getFullYear();
 
   //windowState: number = 0;
-  enum: typeof windowState = windowState;
-  currentWindow: number = windowState.Dashboard;
+  enum: typeof windows = windows;
+  currentWindow: number = windows.Dashboard;
 
   showDashboard()
   {
-      this.currentWindow = windowState.Dashboard;
+      this.currentWindow = windows.Dashboard;
   }
 
   showProfile()
   {
-    this.currentWindow = windowState.Profile
+    this.currentWindow = windows.Profile
   }
 
   showGenerate()
   {
-    this.currentWindow = windowState.Generate
+    this.currentWindow = windows.Generate
   }
 
   showSettings()
   {
-    this.currentWindow = windowState.Settings
+    this.currentWindow = windows.Settings
   }
 }
