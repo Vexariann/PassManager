@@ -1,0 +1,85 @@
+.popupWrapper
+{
+    visibility: visible;
+    position: relative;
+    background-color: white;
+    width: 50vw;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 15px;
+}
+
+.inputField
+{
+    background-color: #C9E3FF;
+    border: 2px solid #95C8FF;
+    width: 60%;
+    height: 50px;
+    margin-left: 20%;
+    margin-bottom: 50px;
+    font-size: 30px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.inputFieldLabel
+{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.submitButton {
+    background-color: #A1CFFF;
+    color: #505050;
+    width: 40%;
+    margin-left: 30%;
+
+    height: 80px;
+    line-height: 80px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.75);
+    border: none;
+}
+
+.submitButton:hover {
+    background-color: #7dbafa;
+    cursor: pointer;
+}
+
+.closeButton
+{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    transition: color 0.1s ease-out;
+}
+
+.closeButton:hover
+{
+    color: red;
+    cursor: pointer;
+}
+
+.popin
+{
+    animation: popin;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes popin
+{
+    0% {transform:scale(0%);}
+    70% {transform: scale(110%);}
+    100% {transform: scale(100%);}
+}

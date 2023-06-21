@@ -6,10 +6,11 @@
         <div class="title center-align">Passmanager</div>
     </div>
     <div class="buttoncontainer row">
-        <div class="mainButton col s3 offset-s2 waves-effect waves-light">Register</div>
-        <div class="mainButton col s3 offset-s2 waves-effect waves-light" (click)="hideComponent()">(debug) Login</div>
+        <div class="mainButton col s3 offset-s2 waves-effect waves-light" (click)="hideComponent()">(debug) Register</div>
+        <div class="mainButton col s3 offset-s2 waves-effect waves-light" (click)="showPopupWindow()">Login</div>
     </div>
     <div class="version">V1.0.1 ALPHA - Vexarian 2022 - {{currentYear}}</div>
+    <app-home-page-popup-window *ngIf="showPopup" class="popupWindow"></app-home-page-popup-window>
 </div>
 <app-app-parent *ngIf="loggedIn"></app-app-parent>
 <!-- NOTE: use Sessionstorage to make sure the user stays logged in when refreshing the page. -->

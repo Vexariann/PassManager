@@ -13,10 +13,21 @@ export class HomePageComponent {
     //NOTE: delete loader service, is not necessary
 
     loggedIn: Boolean = false;
+    showPopup: Boolean = false;
 
     hideComponent()
     {
       this.loggedIn = true;
       console.log("clicked");
+    }
+
+    showPopupWindow()
+    {
+      this.showPopup = true;
+    }
+
+    hidePopupWindow()
+    {
+      this.showPopup = false;
     }
 }

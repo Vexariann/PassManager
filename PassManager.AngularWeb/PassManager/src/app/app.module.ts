@@ -12,6 +12,7 @@ import { AppParentComponent } from './components/app-parent/app-parent.component
 import { ProfileComponent } from './components/profile/profile.component';
 import { GenerateComponent } from './components/generate/generate.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { HomePagePopupWindowComponent } from './components/home-page-popup-window/home-page-popup-window.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     AppParentComponent,
     ProfileComponent,
     GenerateComponent,
-    SettingsComponent
+    SettingsComponent,
+    HomePagePopupWindowComponent
   ],
   imports: [
     BrowserModule,
