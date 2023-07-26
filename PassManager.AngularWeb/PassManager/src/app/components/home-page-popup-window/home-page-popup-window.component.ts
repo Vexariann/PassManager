@@ -8,5 +8,16 @@ import { HomePageComponent } from '../home-page/home-page.component';
 })
 export class HomePagePopupWindowComponent {
 
+    constructor(private homePage: HomePageComponent) {}
+
+    hidePopupWindow()
+    {
+      this.homePage.hidePopupWindow();
+    }
+
+    logIn()
+    {
+      this.homePage.logIn();
+    }
 
 }

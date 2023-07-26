@@ -15,7 +15,7 @@ export class HomePageComponent {
     loggedIn: Boolean = false;
     showPopup: Boolean = false;
 
-    hideComponent()
+    logIn()
     {
       this.loggedIn = true;
       console.log("clicked");

@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassManager.Domain", "PassM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassManager.Winforms", "PassManager.Winforms\PassManager.Winforms.csproj", "{EE55E8ED-4A44-4DE6-A1CA-C8FD16259F02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassManager.Business", "PassManager.Business\PassManager.Business.csproj", "{607C7021-6FC0-408D-AD0B-83E867A3AA48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassManager.Business", "PassManager.Business\PassManager.Business.csproj", "{607C7021-6FC0-408D-AD0B-83E867A3AA48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassManager.Data", "PassManager.Data\PassManager.Data.csproj", "{38ADA35B-FF68-45C4-9BAC-1C18E39F7EE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassManager.Data", "PassManager.Data\PassManager.Data.csproj", "{38ADA35B-FF68-45C4-9BAC-1C18E39F7EE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassManager.api", "PassManager.api\PassManager.api.csproj", "{83D80D4C-072E-4DAE-8E60-44EDE5E053E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{38ADA35B-FF68-45C4-9BAC-1C18E39F7EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38ADA35B-FF68-45C4-9BAC-1C18E39F7EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38ADA35B-FF68-45C4-9BAC-1C18E39F7EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83D80D4C-072E-4DAE-8E60-44EDE5E053E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D80D4C-072E-4DAE-8E60-44EDE5E053E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D80D4C-072E-4DAE-8E60-44EDE5E053E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D80D4C-072E-4DAE-8E60-44EDE5E053E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
