@@ -1,10 +1,24 @@
 <div class="popupWrapper popin">
     <div class="closeButton" (click)="hidePopupWindow()">X</div>
-    <form>
+    <form [formGroup]="loginUserForm" (ngSubmit)="loginUser()" *ngIf="currentPopup===enum.Login">
         <div class="inputFieldLabel">Username</div>
-        <input type="text" class="inputField" name="username">
+        <input type="text" class="inputField" name="username" formControlName="Username">
         <div class="inputFieldLabel">Password</div>
-        <input type="password" class="inputField" name="password">
-        <button class="submitButton" type="submit" (click)="logIn()">(debug) Login</button>      
-    </form>   
+        <input type="password" class="inputField" name="password" formControlName="Password">
+        <button class="submitButton" type="submit">Login</button>
+        <!--<button class="submitButton" type="submit" (click)="logIn()">(debug) Login</button>-->
+        <br><br><div id="errorText"></div>         
+    </form>
+    <form [formGroup]="registerUserForm" (ngSubmit)="createUser()" *ngIf="currentPopup===enum.Register" enctype="multipart/form-data">
+        <div class="inputFieldLabel">Username</div>
+        <input type="text" class="inputField" name="Username" formControlName="Username">
+        <div class="inputFieldLabel">Password</div>
+        <input type="password" class="inputField" name="Password" formControlName="Password">
+        <div class="inputFieldLabel">Repeat Password</div>
+        <input id="RepeatPassword" type="password" class="inputField" name="RepeatPassword">
+        <div class="inputFieldLabel">Profile picture</div>
+        <input  type="file" class="fileUploader" (change)="updatePreviewImage($event)" name="ProfilePicture" formControlName="ProfilePicture" accept="image/png, image/jpeg" #file><img class = "previewImage" (click)="file.click()" [src]="previewImage" src="../../../assets/images/profilepictures/!Standard.jpg">
+        <button class="submitButton" type="submit">Register</button>
+        <br><br><div id="errorText"></div>    
+    </form> 
 </div>

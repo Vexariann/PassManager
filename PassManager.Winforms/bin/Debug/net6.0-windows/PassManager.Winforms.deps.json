@@ -699,6 +699,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2",
+          "Microsoft.Extensions.Configuration.Json": "7.0.0",
           "System.Text.Json": "7.0.0"
         },
         "runtime": {

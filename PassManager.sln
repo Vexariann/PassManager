@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassManager.Business", "Pas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassManager.Data", "PassManager.Data\PassManager.Data.csproj", "{38ADA35B-FF68-45C4-9BAC-1C18E39F7EE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassManager.api", "PassManager.api\PassManager.api.csproj", "{83D80D4C-072E-4DAE-8E60-44EDE5E053E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassManager.api", "PassManager.api\PassManager.api.csproj", "{83D80D4C-072E-4DAE-8E60-44EDE5E053E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -6,8 +6,9 @@
 <div class="pageWrapper">
     <div class="sideNav">
         <div class="usernameWrapper">
-            <img class="profilePicture" src="../../../assets/images/profilePicture.jpg">
-            <div class="username">Vexarian</div>
+            <!--<img class="profilePicture" src="../../../assets/images/profilePicture.jpg">-->
+            <img class="profilePicture" [src]="profilePicture">
+            <div class="username">{{username}}</div>
         </div>
         <div class="sideNavButton" (click)="showDashboard()"><img class="sideNavButtonImage" src="../../../assets/images/PassManagerLock.png"> <div class="sideNavButtonText">Dashboard</div></div>
         <div class="sideNavButton" (click)="showProfile()"><img class="sideNavButtonImage" src="../../../assets/images/PassManagerProfile.png"> <div class="sideNavButtonText">Profile</div></div>

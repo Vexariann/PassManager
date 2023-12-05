@@ -1,13 +1,21 @@
-﻿using PassManager.Domain.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using PassManager.Domain.Interfaces;
 using PassManager.Domain.Models;
 
 namespace PassManager.Data
 {
-    public class Repository<TEntity> : IRepository<TEntity>
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : EntityBase
     {
-        public Task<TEntity> Create()
+        private readonly DataContext _dataContext;
+
+        public Repository(DataContext dataContext)
         {
-            throw new NotImplementedException();
+            _dataContext = dataContext;
+        }
+
+        public async Task Create(TEntity entity)
+        {
+            await Task.Run(() => Set().Add(entity));
         }
 
         public Task<TEntity> Delete(TEntity entity)
@@ -15,9 +23,13 @@ namespace PassManager.Data
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<TEntity>> GetAll()
+        public async Task<IEnumerable<TEntity>> GetAll()
         {
-            throw new NotImplementedException();
+            return await Task.Run(() =>
+            {
+                IEnumerable<TEntity> entities = Set();
+                return entities;
+            });
         }
 
         public Task<User> GetById(int id)
@@ -25,9 +37,26 @@ namespace PassManager.Data
             throw new NotImplementedException();
         }
 
-        public Task<TEntity> Update(TEntity entity)
+        public async Task<User> GetUserByName(string name)
         {
-            throw new NotImplementedException();
+            User user = _dataContext.Set<User>().FirstOrDefault(e => e.Username.Equals(name));
+            return user;
+        }
+
+        public async Task Update(string username, string profilePicture)
+        {
+            _dataContext.Set<User>().Where(u => u.Username == username).ExecuteUpdate(b => b.SetProperty(u => u.ProfilePicture, profilePicture));
+            return;
+        }
+
+        public Task SaveChanges()
+        {
+            return _dataContext.SaveChangesAsync();
+        }
+
+        private DbSet<TEntity> Set()
+        {
+            return _dataContext.Set<TEntity>();
         }
     }
 }

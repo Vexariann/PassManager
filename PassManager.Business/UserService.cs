@@ -3,7 +3,7 @@ using PassManager.Domain.Models;
 
 namespace PassManager.Business
 {
-    internal class UserService : IUserService
+    public class UserService : IUserService
     {
         // Todo:
         // Save passwords to database. This can be done using the StoredPassword model
@@ -15,9 +15,26 @@ namespace PassManager.Business
         // the ID from the profile will be associated with the passwords stored.
 
         // look into hashing
-        public async Task<User> Create()
+
+        private readonly IRepository<User> _userRepository;
+
+        public UserService(IRepository<User> userRepository)
         {
-            throw new NotImplementedException();
+            _userRepository = userRepository;
+        }
+
+        public async Task<bool> Create(User user)
+        {
+            IEnumerable<User> users = await _userRepository.GetAll();
+
+            if (users.Any(u => u.Username == user.Username))
+            {
+                return false;
+            }
+
+            await _userRepository.Create(user);
+            await _userRepository.SaveChanges();
+            return true;
         }
 
         public Task<User> Delete()
@@ -30,14 +47,26 @@ namespace PassManager.Business
             throw new NotImplementedException();
         }
 
+        public async Task<User> GetUserByName(string name)
+        {
+            User user = await _userRepository.GetUserByName(name);
+            return user;
+        }
+
         public Task<User> Login(string username, string password)
         {
             throw new NotImplementedException();
         }
 
-        public Task<User> Update()
+        public async Task<bool> Update(string username, string profilePicture)
         {
-            throw new NotImplementedException();
+            IEnumerable<User> users = await _userRepository.GetAll();
+            if (users.Any(u => u.Username == username))
+            {
+                await _userRepository.Update(username, profilePicture);
+                return true;
+            }
+            return false;
         }
     }
 }

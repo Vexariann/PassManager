@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Injectable, Input } from '@angular/core';
 import { MatGridList } from '@angular/material/grid-list';
 
 enum windows {
@@ -7,6 +7,10 @@ enum windows {
   Generate,
   Settings,
 }
+
+@Injectable({
+  providedIn: 'root'
+})
 
 @Component({
   selector: 'app-app-parent',
@@ -20,6 +24,16 @@ export class AppParentComponent {
   //windowState: number = 0;
   enum: typeof windows = windows;
   currentWindow: number = windows.Dashboard;
+  username: String = sessionStorage.getItem("Username") || "Undefined";
+  //profilePicture: String = "Test123";
+
+  @Input() profilePicture : String = "test123";
+  
+  DisplayImage(Base64String: any)
+  {
+      console.log("In DisplayImage:" + Base64String.username);
+      this.profilePicture = "data:image/png;base64," + Base64String.username;
+  }
 
   showDashboard()
   {

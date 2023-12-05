@@ -2,12 +2,14 @@
 
 namespace PassManager.Domain.Interfaces
 {
-    public interface IRepository<TEntity>
+    public interface IRepository<TEntity> where TEntity : EntityBase
     {
-        Task<TEntity> Create();
-        Task<TEntity> Update(TEntity entity);
+        Task Create(TEntity entity);
+        Task Update(string username, string profilePicture);
         Task<TEntity> Delete(TEntity entity);
         Task<IEnumerable<TEntity>> GetAll();
         Task<User> GetById(int id);
+        Task<User> GetUserByName(string name);
+        Task SaveChanges();
     }
 }
