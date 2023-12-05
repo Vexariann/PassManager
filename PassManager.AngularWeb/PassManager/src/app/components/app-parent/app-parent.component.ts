@@ -31,7 +31,7 @@ export class AppParentComponent {
   
   DisplayImage(Base64String: any)
   {
-      console.log("In DisplayImage:" + Base64String.username);
+      //console.log("In DisplayImage:" + Base64String.username);
       this.profilePicture = "data:image/png;base64," + Base64String.username;
   }
 

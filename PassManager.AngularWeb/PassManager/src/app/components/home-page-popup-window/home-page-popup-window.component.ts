@@ -138,7 +138,7 @@ export class HomePagePopupWindowComponent {
           this.httpService.loginUser(user).subscribe({
             next: (res) => {
               //console.log(res);
-              //sessionStorage.setItem("LoggedIn", "true")
+              sessionStorage.setItem("LoggedIn", "true")
               //debugger;
               sessionStorage.setItem("Username", res.user.username)
               let data; 

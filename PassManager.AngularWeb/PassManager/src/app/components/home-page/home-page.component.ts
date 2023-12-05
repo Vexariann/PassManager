@@ -14,7 +14,10 @@ export class HomePageComponent {
 
     currentYear: number = new Date().getFullYear();
   
-    ngOnInit(): void{}
+    ngOnInit(): void
+    {
+      this.loggedIn = (this.loggedInString === 'true');
+    }
 
     //NOTE: delete loader service, is not necessary
 
@@ -22,6 +25,7 @@ export class HomePageComponent {
     showPopup: Boolean = false;
     popupWindowName: String = "";
     profilePictureBase64: String = "";
+    loggedInString: String = sessionStorage.getItem("LoggedIn") || "false";
 
     SetProfilePictureBase64String(Base64String : any)
     {
@@ -30,7 +34,6 @@ export class HomePageComponent {
 
     logIn()
     {
-      
       this.loggedIn = true;
     }
 
