@@ -58,5 +58,13 @@ namespace PassManager.Data
         {
             return _dataContext.Set<TEntity>();
         }
+
+        public async Task<IEnumerable<StoredPassword>> GetPasswordByUserId(int userId)
+        {
+            //StoredPassword passwords = _dataContext.Set<StoredPassword>().ToArray(e => e)     .FirstOrDefault(e => e.Username.Equals(name));
+            //StoredPassword passwords = _dataContext.StoredPassword.Where(e => e.UserID == userId).ToList();
+            List<StoredPassword> result = await _dataContext.StoredPassword.Where(x => x.UserID == userId).ToListAsync();
+            return result;
+        }
     }
 }

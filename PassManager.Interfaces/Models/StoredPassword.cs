@@ -1,6 +1,6 @@
 ﻿namespace PassManager.Domain.Models
 {
-    public class StoredPassword
+    public class StoredPassword : EntityBase
     {
         public int ID { get; set; }
         public string Password { get; set; }

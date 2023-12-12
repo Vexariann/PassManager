@@ -10,6 +10,7 @@ namespace PassManager.Domain.Interfaces
         Task<IEnumerable<TEntity>> GetAll();
         Task<User> GetById(int id);
         Task<User> GetUserByName(string name);
+        Task<IEnumerable<StoredPassword>> GetPasswordByUserId(int userId);
         Task SaveChanges();
     }
 }
