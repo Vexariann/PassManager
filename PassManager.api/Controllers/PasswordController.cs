@@ -15,11 +15,11 @@ namespace PassManager.api.Controllers
             _passwordService = passwordService;
         }
 
-        [HttpGet("GetProfilePictureByUsername")]
+        [HttpGet("GetPasswordByUserId")]
         [DisableRequestSizeLimit]
-        public async Task<IActionResult> GetPasswordsByUserId(int id)
+        public async Task<IActionResult> GetPasswordsByUserId(int userId)
         {
-            var password = await _passwordService.GetPasswordByuserId(id);
+            var password = await _passwordService.GetPasswordByuserId(userId);
             return Ok(password);
         }
     }

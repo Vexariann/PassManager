@@ -24,7 +24,7 @@ namespace PassManager.Business
             _passwordRepository = passwordRepository;
         }
 
-        public Task<StoredPassword> getAll()
+        public Task<StoredPassword> GetAll()
         {
             throw new NotImplementedException();
         }

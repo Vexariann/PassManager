@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from "../interfaces/user"
+import { ProfilePictureDTO } from 'app/interfaces/profile-picture-dto';
+import { PasswordDTO } from 'app/interfaces/password-dto';
 
 @Injectable({
   providedIn: 'root'
@@ -35,6 +37,13 @@ export class HttpServiceService {
   {
       const url = "https://localhost:7222/user/GetProfilePictureByUsername"
       const params = new HttpParams().append("username", username as string);
-      return this.http.get<string>(url, {params: params});
+      return this.http.get<ProfilePictureDTO>(url, {params: params});
+  }
+
+  public getPasswordsByUserId(userId: number)
+  {
+    const url = "https://localhost:7222/password/GetPasswordByUserId"
+    const params = new HttpParams().append("userId", userId);
+    return this.http.get<PasswordDTO[]>(url, {params: params});
   }
 }

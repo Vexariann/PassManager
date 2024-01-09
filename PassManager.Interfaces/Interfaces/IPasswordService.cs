@@ -4,7 +4,7 @@ namespace PassManager.Domain.Interfaces
 {
     public interface IPasswordService
     {
-        Task<StoredPassword> getAll();
+        Task<StoredPassword> GetAll();
         Task<bool> Create(StoredPassword password);
         Task<bool> Update(string name, string thumbnail);
         Task<StoredPassword> Delete();

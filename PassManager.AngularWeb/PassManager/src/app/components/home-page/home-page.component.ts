@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpServiceService } from 'app/services/http-service.service';
 import { HomePagePopupWindowComponent } from '../home-page-popup-window/home-page-popup-window.component';
 
 @Component({
@@ -10,7 +11,7 @@ export class HomePageComponent {
 
     // this line breaks code!
     // circular dependency
-    //constructor(private homePagePopup: HomePagePopupWindowComponent) {}
+    constructor(private httpService: HttpServiceService) {}
 
     currentYear: number = new Date().getFullYear();
   
@@ -19,18 +20,11 @@ export class HomePageComponent {
       this.loggedIn = (this.loggedInString === 'true');
     }
 
-    //NOTE: delete loader service, is not necessary
-
     loggedIn: Boolean = false;
     showPopup: Boolean = false;
     popupWindowName: String = "";
     profilePictureBase64: String = "";
     loggedInString: String = sessionStorage.getItem("LoggedIn") || "false";
-
-    SetProfilePictureBase64String(Base64String : any)
-    {
-      this.profilePictureBase64 = "data:image/png;base64," + Base64String.username;
-    }
 
     logIn()
     {

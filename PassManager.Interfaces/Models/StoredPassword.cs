@@ -2,7 +2,7 @@
 {
     public class StoredPassword : EntityBase
     {
-        public int ID { get; set; }
+        //public int ID { get; set; }
         public string Password { get; set; }
         public string Website { get; set; }
         public string Thumbnail { get; set; }

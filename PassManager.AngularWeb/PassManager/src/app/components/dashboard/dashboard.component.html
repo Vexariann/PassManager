@@ -2,49 +2,17 @@
     <div class="dashboardTitle">Dashboard</div>
     <div class="searchButton"><img class="searchButtonImage" src="../../../assets/images/PassManagerSearch.png"></div>
     <div class="filterButton"><img class="filterButtonImage" src="../../../assets/images/PassManagerFilter.png"></div>
-    <div class="passwordWrapper">
+    <div class="passwordWrapper" *ngFor="let item of results;">
         <img class="passwordThumbnail" src="../../../assets/images/PoLQ16q1u54HgKy9RxuiB.jpg">
-        <div class="passwordTitle">Google</div>
+        <div class="passwordTitle">{{item.website}}</div>
         <img class="passwordCategoryIcon" src="../../../assets/images/PassManagerProfile.png">
         <img class="passwordFavorite" src="../../../assets/images/starEmpty.png">
     </div>
-    <div class="passwordWrapper">
+    <!-- <div class="passwordWrapper">
         <img class="passwordThumbnail" src="../../../assets/images/PoLQ16q1u54HgKy9RxuiB.jpg">
         <div class="passwordTitle">Google 2</div>
         <img class="passwordCategoryIcon" src="../../../assets/images/PassManagerProfile.png">
         <img class="passwordFavorite" src="../../../assets/images/starEmpty.png">
-    </div>
-    <div class="passwordWrapper">
-        <img class="passwordThumbnail" src="../../../assets/images/PoLQ16q1u54HgKy9RxuiB.jpg">
-        <div class="passwordTitle">Google 3</div>
-        <img class="passwordCategoryIcon" src="../../../assets/images/PassManagerProfile.png">
-        <img class="passwordFavorite" src="../../../assets/images/starEmpty.png">
-    </div>
-    <div class="passwordWrapper">
-        <img class="passwordThumbnail" src="../../../assets/images/PoLQ16q1u54HgKy9RxuiB.jpg">
-        <div class="passwordTitle">Google 4</div>
-        <img class="passwordCategoryIcon" src="../../../assets/images/PassManagerProfile.png">
-        <img class="passwordFavorite" src="../../../assets/images/starEmpty.png">
-    </div>
-    <div class="passwordWrapper">
-        <img class="passwordThumbnail" src="../../../assets/images/PoLQ16q1u54HgKy9RxuiB.jpg">
-        <div class="passwordTitle">Google 5</div>
-        <img class="passwordCategoryIcon" src="../../../assets/images/PassManagerProfile.png">
-        <img class="passwordFavorite" src="../../../assets/images/starEmpty.png">
-    </div>
-    <div class="passwordWrapper">
-        <img class="passwordThumbnail" src="../../../assets/images/PoLQ16q1u54HgKy9RxuiB.jpg">
-        <div class="passwordTitle">Google 6</div>
-        <img class="passwordCategoryIcon" src="../../../assets/images/PassManagerProfile.png">
-        <img class="passwordFavorite" src="../../../assets/images/starEmpty.png">
-    </div>
-    <div class="passwordWrapper">
-        <img class="passwordThumbnail" src="../../../assets/images/PoLQ16q1u54HgKy9RxuiB.jpg">
-        <div class="passwordTitle">Google 7</div>
-        <img class="passwordCategoryIcon" src="../../../assets/images/PassManagerProfile.png">
-        <img class="passwordFavorite" src="../../../assets/images/starEmpty.png">
-    </div>
+    </div> -->
     <div class="addPasswordButton">+<span class="tooltiptext">Add a new password</span></div>
-    <!-- <div>test content</div>
-    <div>row 2</div> -->
 </div>

@@ -69,6 +69,7 @@ internal static class Extentions
     {
         builder.Services
             .AddScoped<IUserService, UserService>()
+            .AddScoped<IPasswordService, PasswordService>()
             .AddScoped(typeof(IRepository<>), typeof(Repository<>))
             .AddDbContext<DataContext>(options =>
             {

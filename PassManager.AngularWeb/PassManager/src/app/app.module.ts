@@ -12,9 +12,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AppParentComponent } from './components/app-parent/app-parent.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { GenerateComponent } from './components/generate/generate.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { HomePagePopupWindowComponent } from './components/home-page-popup-window/home-page-popup-window.component';
+import { DashboardPopupWindowComponent } from './dashboard-popup-window/dashboard-popup-window.component';
+import { GenerateComponent } from './generate/generate.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,10 @@ import { HomePagePopupWindowComponent } from './components/home-page-popup-windo
     DashboardComponent,
     AppParentComponent,
     ProfileComponent,
-    GenerateComponent,
     SettingsComponent,
-    HomePagePopupWindowComponent
+    HomePagePopupWindowComponent,
+    DashboardPopupWindowComponent,
+    GenerateComponent
   ],
   imports: [
     BrowserModule,

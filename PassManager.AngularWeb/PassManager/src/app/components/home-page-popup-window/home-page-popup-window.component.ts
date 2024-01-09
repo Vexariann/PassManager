@@ -89,14 +89,12 @@ export class HomePagePopupWindowComponent {
               //then upload image
               this.httpService.uploadImage(this.encodedFile!, this.registerUserForm.value.Username!, this.selectedFile.name).subscribe({ next: (res) => {
                 console.log(res);
+                sessionStorage.setItem("Username", this.registerUserForm.value.Username || "undefined")
+                sessionStorage.setItem("LoggedIn", "true")
+                this.logIn();
               }, error: (err) => {console.log(err.error);}
               });
               console.log(this.encodedFile);
-              sessionStorage.setItem("Username", this.registerUserForm.value.Username || "undefined")
-              let data;
-              this.httpService.getProfilePictureByUsername(this.registerUserForm.value.Username!).subscribe(res => {data = res, console.log(res); this.homePage.SetProfilePictureBase64String(data)});
-              sessionStorage.setItem("LoggedIn", "true")
-              this.logIn();
             }, error: (err) => {console.log(err.error); errorHTML.innerHTML = err.error.message}
           });
 
@@ -141,10 +139,7 @@ export class HomePagePopupWindowComponent {
               sessionStorage.setItem("LoggedIn", "true")
               //debugger;
               sessionStorage.setItem("Username", res.user.username)
-              let data; 
-              this.httpService.getProfilePictureByUsername(res.user.username).subscribe(res => {data = res, console.log(res); this.homePage.SetProfilePictureBase64String(data)});
-              console.log(data);
-              sessionStorage.setItem("ProfilePicture", this.registerUserForm.value.ProfilePicture || "undefined")
+              sessionStorage.setItem("UserId", res.user.id)
               this.logIn();
             }, error: (err) => {console.log(err.error); errorHTML.innerHTML = err.error.message}
           });

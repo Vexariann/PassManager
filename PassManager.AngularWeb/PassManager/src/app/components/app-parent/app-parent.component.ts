@@ -1,5 +1,6 @@
 import { Component, Injectable, Input } from '@angular/core';
 import { MatGridList } from '@angular/material/grid-list';
+import { HttpServiceService } from 'app/services/http-service.service';
 
 enum windows {
   Dashboard,
@@ -19,6 +20,9 @@ enum windows {
 })
 
 export class AppParentComponent {
+
+  constructor(private httpService: HttpServiceService) {}
+
   currentYear: number = new Date().getFullYear();
 
   //windowState: number = 0;
@@ -29,10 +33,14 @@ export class AppParentComponent {
 
   @Input() profilePicture : String = "test123";
   
-  DisplayImage(Base64String: any)
+  ngOnInit(): void
   {
-      //console.log("In DisplayImage:" + Base64String.username);
-      this.profilePicture = "data:image/png;base64," + Base64String.username;
+    this.DisplayImage();
+  }
+
+  DisplayImage()
+  {
+    this.httpService.getProfilePictureByUsername(sessionStorage.getItem("Username") || "Undefined").subscribe(res => {this.profilePicture = "data:image/png;base64," + res.username; console.log(res);});
   }
 
   showDashboard()
@@ -53,5 +61,12 @@ export class AppParentComponent {
   showSettings()
   {
     this.currentWindow = windows.Settings
+  }
+
+  logOut()
+  {
+    sessionStorage.setItem("Username", "")
+    sessionStorage.setItem("LoggedIn", "false")
+    window.location.reload();
   }
 }
