@@ -1,5 +1,4 @@
-.popupWrapper
-{
+.popupWrapper {
     visibility: visible;
     position: relative;
     background-color: white;
@@ -13,8 +12,7 @@
     overflow-y: auto;
 }
 
-.inputField
-{
+.inputField {
     background-color: #C9E3FF;
     border: 2px solid #95C8FF;
     width: 60%;
@@ -26,21 +24,18 @@
     border-radius: 5px;
 }
 
-.inputFieldLabel
-{
+.inputFieldLabel {
     text-align: center;
     color: black;
     font-weight: bold;
     font-size: 40px;
 }
 
-.fileUploader
-{
+.fileUploader {
     display: none;
 }
 
-.previewImage
-{
+.previewImage {
     margin-top: 50px;
     margin-bottom: 50px;
     width: 50%;
@@ -64,12 +59,11 @@
     font-weight: bold;
     text-align: center;
     border-radius: 5px;
-    box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75);
     border: none;
 }
 
-#errorText
-{
+#errorText {
     width: 100%;
     text-align: center;
     color: red;
@@ -81,8 +75,7 @@
     cursor: pointer;
 }
 
-.closeButton
-{
+.closeButton {
     position: absolute;
     right: 15px;
     top: 15px;
@@ -92,46 +85,51 @@
     transition: color 0.1s ease-out;
 }
 
-.closeButton:hover
-{
+.closeButton:hover {
     color: red;
     cursor: pointer;
 }
 
-.popin
-{
+.popin {
     animation: popin;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
 }
 
-@keyframes popin
-{
-    0% {transform:scale(0%);}
-    70% {transform: scale(110%);}
-    100% {transform: scale(100%);}
+@keyframes popin {
+    0% {
+        transform: scale(0%);
+    }
+
+    70% {
+        transform: scale(110%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
 }
 
 //custom scrollbar
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: #f1f1f1;
-    border-radius: 10px; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #C9E3FF; 
-    border-radius: 10px; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #84bfff; 
-    border-radius: 10px; 
-  }
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #C9E3FF;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #84bfff;
+    border-radius: 10px;
+}

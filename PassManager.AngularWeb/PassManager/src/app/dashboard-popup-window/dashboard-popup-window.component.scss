@@ -1,0 +1,124 @@
+.popupWrapper {
+    visibility: visible;
+    position: absolute;
+    background-color: white;
+    width: 70vw;
+    margin-top: 70px;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 15px;
+    max-height: 520px;
+    overflow-y: auto;
+}
+
+.inputField {
+    background-color: #C9E3FF;
+    border: 2px solid #95C8FF;
+    width: 60%;
+    height: 50px;
+    margin-left: 20%;
+    margin-bottom: 50px;
+    font-size: 30px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.inputFieldLabel {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.fileUploader {
+    display: none;
+}
+
+.submitButton {
+    background-color: #A1CFFF;
+    color: #505050;
+    width: 40%;
+    margin-left: 30%;
+
+    height: 80px;
+    line-height: 80px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75);
+    border: none;
+}
+
+#errorText {
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+.submitButton:hover {
+    background-color: #7dbafa;
+    cursor: pointer;
+}
+
+.closeButton {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    transition: color 0.1s ease-out;
+}
+
+.closeButton:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.popin {
+    animation: popin;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes popin {
+    0% {
+        transform: scale(0%);
+    }
+
+    70% {
+        transform: scale(110%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
+
+//custom scrollbar
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #C9E3FF;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #84bfff;
+    border-radius: 10px;
+}

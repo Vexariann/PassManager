@@ -1,5 +1,4 @@
-.pageContentWrapper
-{
+.pageContentWrapper {
     margin-left: 305px;
     width: calc(100% - 305px);
     height: 100%;
@@ -7,16 +6,14 @@
     overflow-y: scroll;
 }
 
-.dashboardTitle
-{
+.dashboardTitle {
     font-weight: bold;
     text-align: center;
     font-size: 50px;
     padding-bottom: 2%;
 }
 
-.searchButton
-{
+.searchButton {
     position: absolute;
     top: 10px;
     left: 20px;
@@ -28,16 +25,14 @@
     cursor: pointer;
 }
 
-.searchButtonImage
-{
+.searchButtonImage {
     margin-left: 3px;
     margin-top: 3px;
     width: 44px;
     height: 44px;
 }
 
-.filterButton
-{
+.filterButton {
     position: absolute;
     top: 10px;
     left: 90px;
@@ -49,16 +44,14 @@
     cursor: pointer;
 }
 
-.filterButtonImage
-{
+.filterButtonImage {
     margin-left: 5px;
     margin-top: 5px;
     width: 40px;
     height: 40px;
 }
 
-.addPasswordButton
-{
+.addPasswordButton {
     position: fixed;
     font-size: 50px;
     text-align: center;
@@ -75,15 +68,13 @@
     filter: drop-shadow(5px 5px 5px #9b9b9b);
 }
 
-.tooltiptext
-{
+.tooltiptext {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
 }
 
-.addPasswordButton .tooltiptext
-{
+.addPasswordButton .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -91,19 +82,17 @@
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-  
+
     /* Position the tooltip */
     position: absolute;
     z-index: 999;
 }
 
-.addPasswordButton:hover
-{
+.addPasswordButton:hover {
     visibility: visible;
 }
 
-.passwordWrapper
-{
+.passwordWrapper {
     margin-left: 4%;
     margin-top: 1%;
     margin-bottom: 2%;
@@ -118,15 +107,13 @@
     overflow: auto;
 }
 
-.passwordTitle
-{
+.passwordTitle {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
 }
 
-.passwordThumbnail
-{
+.passwordThumbnail {
     width: 90%;
     height: 160px;
     padding-left: 5%;
@@ -135,8 +122,7 @@
     object-fit: cover;
 }
 
-.passwordCategoryIcon
-{
+.passwordCategoryIcon {
     width: 20%;
     padding-top: 25px;
     padding-left: 40%;
@@ -145,8 +131,7 @@
     filter: drop-shadow(5px 5px 5px #9b9b9b); //debug
 }
 
-.passwordFavorite
-{
+.passwordFavorite {
     position: absolute;
     width: 15%;
     height: auto;
@@ -159,22 +144,22 @@
 /* width */
 ::-webkit-scrollbar {
     width: 20px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: #ffffff;
-    border-radius: 10px; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #84bfff; 
-    border-radius: 10px; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #439eff; 
-    border-radius: 10px; 
-  }
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #84bfff;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #439eff;
+    border-radius: 10px;
+}

@@ -1,1 +1,13 @@
-<p>dashboard-popup-window works!</p>
+<div class="popupWrapper popin">
+    <div class="closeButton" (click)="hidePopupWindow()">X</div>
+    <div class="inputFieldLabel">Add a new password</div><br><br>
+    <form [formGroup]="submitPasswordForm" (ngSubmit)="submitPassword()">
+        <div class="inputFieldLabel">Website</div>
+        <input type="text" class="inputField" name="website" formControlName="Website">
+        <div class="inputFieldLabel">Password</div>
+        <input type="password" class="inputField" name="password" formControlName="Password">
+        <button class="submitButton" type="submit">Submit</button>
+        <br><br>
+        <div id="errorText"></div>
+    </form>
+</div>

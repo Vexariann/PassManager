@@ -21,7 +21,7 @@ enum windows {
 
 export class AppParentComponent {
 
-  constructor(private httpService: HttpServiceService) {}
+  constructor(private httpService: HttpServiceService) { }
 
   currentYear: number = new Date().getFullYear();
 
@@ -31,41 +31,35 @@ export class AppParentComponent {
   username: String = sessionStorage.getItem("Username") || "Undefined";
   //profilePicture: String = "Test123";
 
-  @Input() profilePicture : String = "test123";
-  
-  ngOnInit(): void
-  {
+  @Input() profilePicture: String = "test123";
+
+  ngOnInit(): void {
     this.DisplayImage();
   }
 
-  DisplayImage()
-  {
-    this.httpService.getProfilePictureByUsername(sessionStorage.getItem("Username") || "Undefined").subscribe(res => {this.profilePicture = "data:image/png;base64," + res.username; console.log(res);});
+  DisplayImage() {
+    this.httpService.getProfilePictureByUsername(sessionStorage.getItem("Username") || "Undefined").subscribe(res => { this.profilePicture = "data:image/png;base64," + res.username; console.log(res); });
   }
 
-  showDashboard()
-  {
-      this.currentWindow = windows.Dashboard;
+  showDashboard() {
+    this.currentWindow = windows.Dashboard;
   }
 
-  showProfile()
-  {
+  showProfile() {
     this.currentWindow = windows.Profile
   }
 
-  showGenerate()
-  {
+  showGenerate() {
     this.currentWindow = windows.Generate
   }
 
-  showSettings()
-  {
+  showSettings() {
     this.currentWindow = windows.Settings
   }
 
-  logOut()
-  {
+  logOut() {
     sessionStorage.setItem("Username", "")
+    sessionStorage.setItem("UserId", "")
     sessionStorage.setItem("LoggedIn", "false")
     window.location.reload();
   }

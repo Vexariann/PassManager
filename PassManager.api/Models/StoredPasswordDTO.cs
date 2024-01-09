@@ -1,14 +1,12 @@
-﻿namespace PassManager.Domain.Models
+﻿namespace PassManager.api.Models
 {
-    public class StoredPassword : EntityBase
+    public class StoredPasswordDTO
     {
         //public int ID { get; set; }
         public string Password { get; set; }
         public string Website { get; set; }
         public string Thumbnail { get; set; }
-        //public User User { get; set; }
         public int UserID { get; set; }
-        public bool Favorite { get; set; }
         public string Tag { get; set; }
     }
 }

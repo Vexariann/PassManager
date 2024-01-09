@@ -14,5 +14,7 @@
         <img class="passwordCategoryIcon" src="../../../assets/images/PassManagerProfile.png">
         <img class="passwordFavorite" src="../../../assets/images/starEmpty.png">
     </div> -->
-    <div class="addPasswordButton">+<span class="tooltiptext">Add a new password</span></div>
+    <div class="addPasswordButton" (click)="showAddPassword()">+<span class="tooltiptext">Add a new password</span>
+    </div>
 </div>
+<app-dashboard-popup-window *ngIf="showPopup" class="popupWindow"></app-dashboard-popup-window>

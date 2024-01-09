@@ -18,130 +18,118 @@ enum popups {
 })
 export class HomePagePopupWindowComponent {
 
-    constructor(private homePage: HomePageComponent, private httpService: HttpServiceService, private sanitizer: DomSanitizer) {}
+  constructor(private homePage: HomePageComponent, private httpService: HttpServiceService, private sanitizer: DomSanitizer) { }
 
-    enum: typeof popups = popups;
-    currentPopup: popups = popups.Login;
-    popupWindowName: String = "";
-    
-    selectedFile?: any;
-    encodedFile?: String;
+  enum: typeof popups = popups;
+  currentPopup: popups = popups.Login;
+  popupWindowName: String = "";
 
-    ngOnInit(): void
-    {
-      this.popupWindowName = this.homePage.popupWindowName;
-      if (this.popupWindowName == "Register")
-      {
-        this.currentPopup = popups.Register;
-      }
-      else if (this.popupWindowName == "Login")
-      {
-        this.currentPopup = popups.Login;
-      }
-    }
+  selectedFile?: any;
+  encodedFile?: String;
 
-    hidePopupWindow()
-    {
-      this.homePage.hidePopupWindow();
-    }
-
-    logIn()
-    {
-      this.homePage.logIn();
-    }
-
-    showRegister()
-    {
+  ngOnInit(): void {
+    this.popupWindowName = this.homePage.popupWindowName;
+    if (this.popupWindowName == "Register") {
       this.currentPopup = popups.Register;
     }
-
-    showLogin()
-    {
+    else if (this.popupWindowName == "Login") {
       this.currentPopup = popups.Login;
     }
+  }
 
-    registerUserForm = new FormGroup({
-      Username: new FormControl('', [Validators.required]),
-      Password: new FormControl('', [Validators.required]),
-      ProfilePicture: new FormControl('', [Validators.required])
-    })
+  hidePopupWindow() {
+    this.homePage.hidePopupWindow();
+  }
 
-    loginUserForm = new FormGroup({
-      Username: new FormControl('', [Validators.required]),
-      Password: new FormControl('', [Validators.required]),
-    })
+  logIn() {
+    this.homePage.logIn();
+  }
 
-    public createUser()
-    {
-      const errorHTML = window.document.getElementById("errorText") as HTMLElement;
+  showRegister() {
+    this.currentPopup = popups.Register;
+  }
 
-      //check if the repeat password matches the password
-      const firstPassword = this.registerUserForm.value.Password;
-      const secondPassword = (<HTMLInputElement>document.getElementById("RepeatPassword")).value;
-      if (firstPassword == secondPassword)
-      {
-          //first upload user
-          let user = this.registerUserForm.value as User;
-          this.httpService.createUser(user).subscribe({
+  showLogin() {
+    this.currentPopup = popups.Login;
+  }
+
+  registerUserForm = new FormGroup({
+    Username: new FormControl('', [Validators.required]),
+    Password: new FormControl('', [Validators.required]),
+    ProfilePicture: new FormControl('', [Validators.required])
+  })
+
+  loginUserForm = new FormGroup({
+    Username: new FormControl('', [Validators.required]),
+    Password: new FormControl('', [Validators.required]),
+  })
+
+  public createUser() {
+    const errorHTML = window.document.getElementById("errorText") as HTMLElement;
+
+    //check if the repeat password matches the password
+    const firstPassword = this.registerUserForm.value.Password;
+    const secondPassword = (<HTMLInputElement>document.getElementById("RepeatPassword")).value;
+    if (firstPassword == secondPassword) {
+      //first upload user
+      let user = this.registerUserForm.value as User;
+      this.httpService.createUser(user).subscribe({
+        next: (res) => {
+          console.log(res);
+          //then upload image
+          this.httpService.uploadImage(this.encodedFile!, this.registerUserForm.value.Username!, this.selectedFile.name).subscribe({
             next: (res) => {
               console.log(res);
-              
-              //then upload image
-              this.httpService.uploadImage(this.encodedFile!, this.registerUserForm.value.Username!, this.selectedFile.name).subscribe({ next: (res) => {
-                console.log(res);
-                sessionStorage.setItem("Username", this.registerUserForm.value.Username || "undefined")
-                sessionStorage.setItem("LoggedIn", "true")
-                this.logIn();
-              }, error: (err) => {console.log(err.error);}
-              });
-              console.log(this.encodedFile);
-            }, error: (err) => {console.log(err.error); errorHTML.innerHTML = err.error.message}
-          });
-
-      } else {
-        errorHTML.innerHTML = "The repeated password does not match!";
-      }
-    }
-
-    previewImage: string | SafeUrl = "../../../assets/images/profilepictures/!Standard.jpg";
-
-    updatePreviewImage(event: any)
-    {
-      const file = event.target.files[0]
-      this.selectedFile = file;
-
-      this.convertImageToBase64();
-
-      this.previewImage = this.sanitizer.bypassSecurityTrustUrl(
-        window.URL.createObjectURL(file)
-      );
-    }
-
-    convertImageToBase64()
-    {
-      var reader = new FileReader();
-      var binaryString = reader.readAsDataURL(this.selectedFile!);
-      reader.onload = () => {
-        var output = reader.result;
-        this.encodedFile = output as String;
-        this.encodedFile = this.encodedFile?.substring(this.encodedFile.lastIndexOf(',') + 1);
-      }
-    }
-
-    public loginUser()
-    {
-      const errorHTML = window.document.getElementById("errorText") as HTMLElement;
-
-      let user = this.loginUserForm.value as User;
-          this.httpService.loginUser(user).subscribe({
-            next: (res) => {
-              //console.log(res);
+              sessionStorage.setItem("Username", this.registerUserForm.value.Username || "undefined")
               sessionStorage.setItem("LoggedIn", "true")
-              //debugger;
-              sessionStorage.setItem("Username", res.user.username)
-              sessionStorage.setItem("UserId", res.user.id)
               this.logIn();
-            }, error: (err) => {console.log(err.error); errorHTML.innerHTML = err.error.message}
+            }, error: (err) => { console.log(err.error); }
           });
+          console.log(this.encodedFile);
+        }, error: (err) => { console.log(err.error); errorHTML.innerHTML = err.error.message }
+      });
+
+    } else {
+      errorHTML.innerHTML = "The repeated password does not match!";
     }
+  }
+
+  previewImage: string | SafeUrl = "../../../assets/images/profilepictures/!Standard.jpg";
+
+  updatePreviewImage(event: any) {
+    const file = event.target.files[0]
+    this.selectedFile = file;
+
+    this.convertImageToBase64();
+
+    this.previewImage = this.sanitizer.bypassSecurityTrustUrl(
+      window.URL.createObjectURL(file)
+    );
+  }
+
+  convertImageToBase64() {
+    var reader = new FileReader();
+    var binaryString = reader.readAsDataURL(this.selectedFile!);
+    reader.onload = () => {
+      var output = reader.result;
+      this.encodedFile = output as String;
+      this.encodedFile = this.encodedFile?.substring(this.encodedFile.lastIndexOf(',') + 1);
+    }
+  }
+
+  public loginUser() {
+    const errorHTML = window.document.getElementById("errorText") as HTMLElement;
+
+    let user = this.loginUserForm.value as User;
+    this.httpService.loginUser(user).subscribe({
+      next: (res) => {
+        //console.log(res);
+        sessionStorage.setItem("LoggedIn", "true")
+        //debugger;
+        sessionStorage.setItem("Username", res.user.username)
+        sessionStorage.setItem("UserId", res.user.id)
+        this.logIn();
+      }, error: (err) => { console.log(err.error); errorHTML.innerHTML = err.error.message }
+    });
+  }
 }

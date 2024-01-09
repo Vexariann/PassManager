@@ -12,13 +12,25 @@ import { Observable, map } from 'rxjs';
 export class DashboardComponent {
 
   results: Array<PasswordDTO> = [];
+  showPopup: Boolean = false;
 
-  constructor(private httpService: HttpServiceService) {}
+  constructor(private httpService: HttpServiceService) { }
 
-  ngOnInit(): void
-  {
+  ngOnInit(): void {
     const userId: number = parseInt(sessionStorage.getItem("UserId") || "0");
     this.httpService.getPasswordsByUserId(userId).subscribe(x => this.results = x)
+  }
+
+  showAddPassword() {
+    this.showPopupWindow();
+  }
+
+  showPopupWindow() {
+    this.showPopup = true;
+  }
+
+  hidePopupWindow() {
+    this.showPopup = false;
   }
 
 }

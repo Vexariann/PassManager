@@ -29,9 +29,11 @@ namespace PassManager.Business
             throw new NotImplementedException();
         }
 
-        public Task<bool> Create(StoredPassword password)
+        public async Task<bool> Create(StoredPassword password)
         {
-            throw new NotImplementedException();
+            await _passwordRepository.Create(password);
+            await _passwordRepository.SaveChanges();
+            return true;
         }
 
         public Task<User> Delete()
