@@ -386,3 +386,17 @@ PassManager.Winforms/obj/PassManager.Winforms.csproj.nuget.dgspec.json
 PassManager.Winforms/obj/PassManager.Winforms.csproj.nuget.g.props
 PassManager.Winforms/obj/project.assets.json
 PassManager.Winforms/obj/project.nuget.cache
+PassManager.Interfaces/obj/Debug/net6.0/PassManager.Domain.assets.cache
+PassManager.Interfaces/obj/Debug/net6.0/PassManager.Domain.csproj.AssemblyReference.cache
+PassManager.Interfaces/obj/Debug/net6.0/PassManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+PassManager.Interfaces/obj/PassManager.Domain.csproj.nuget.dgspec.json
+PassManager.Interfaces/obj/PassManager.Domain.csproj.nuget.g.props
+PassManager.Interfaces/obj/project.assets.json
+PassManager.Interfaces/obj/project.nuget.cache
+PassManager.Winforms/obj/Debug/net6.0-windows/PassManager.Winforms.assets.cache
+PassManager.Winforms/obj/Debug/net6.0-windows/PassManager.Winforms.csproj.AssemblyReference.cache
+PassManager.Winforms/obj/Debug/net6.0-windows/PassManager.Winforms.GeneratedMSBuildEditorConfig.editorconfig
+PassManager.Winforms/obj/PassManager.Winforms.csproj.nuget.dgspec.json
+PassManager.Winforms/obj/PassManager.Winforms.csproj.nuget.g.props
+PassManager.Winforms/obj/project.assets.json
+PassManager.Winforms/obj/project.nuget.cache
